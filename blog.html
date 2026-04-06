@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outdoor Movie Blog | Tips, Ideas & Inspiration | Premiere Outdoor Movies</title>
+  <meta name="description" content="Outdoor movie tips, event ideas, and expert advice from Premiere Outdoor Movies. Planning a backyard movie night, corporate event, or community screening? Start here." />
+  <link rel="canonical" href="https://www.premiereoutdoormovie.com/blog/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Outdoor Movie Blog | Tips, Ideas & Inspiration | Premiere Outdoor Movies" />
+  <meta property="og:description" content="Expert tips and inspiration for outdoor movie events — from backyard movie nights to large-scale community screenings." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #C8102E; --red-dark: #a00d24;
+      --navy: #0D1B2A; --navy-light: #162033;
+      --charcoal: #1a1a1a; --offwhite: #f7f6f4;
+      --gray: #6b7280; --light-gray: #e5e7eb;
+      --white: #ffffff;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 72px;
+      background: var(--navy);
+    }
+    .nav-logo img { height: 44px; display: block; }
+    .nav-links { display: flex; list-style: none; gap: 8px; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 6px; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: white; }
+
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a::after { content: ' ›'; font-size: 12px; opacity: 0.6; }
+    .dropdown-menu {
+      position: absolute; top: calc(100% + 8px); left: 0;
+      background: var(--navy-light); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 8px; min-width: 220px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+      opacity: 0; visibility: hidden; transform: translateY(-6px);
+      transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+      pointer-events: none;
+      max-height: calc(100vh - 90px); overflow-y: auto;
+    }
+    .nav-dropdown.open .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+    .dropdown-menu a { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.82); text-decoration: none; font-size: 13.5px; padding: 9px 12px; border-radius: 7px; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    .dropdown-menu a:hover { background: rgba(255,255,255,0.07); color: white; }
+    .dropdown-menu .dd-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 6px 4px; }
+    .dropdown-menu .dd-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9); padding: 6px 12px 2px; display: block; }
+    .dd-icon { font-size: 15px; }
+    .nav-cta { background: var(--red); color: white; padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--red-dark); }
+
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: white; border-radius: 2px; }
+
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: rgba(13,27,42,0.99); z-index: 99; padding: 24px; flex-direction: column; overflow-y: auto; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 16px; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .mobile-menu a:hover { color: white; }
+    .mobile-cta { background: var(--red); color: white !important; text-align: center; border-radius: 8px; padding: 14px !important; margin-top: 16px; font-weight: 700 !important; border-bottom: none !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: var(--navy); padding: 130px 48px 72px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('./hero-bg.jpg') center/cover no-repeat;
+      opacity: 0.07;
+    }
+    .hero-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; position: relative; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 900; color: white; text-transform: uppercase; line-height: 1.0; margin-bottom: 18px; position: relative; }
+    .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.68); max-width: 560px; margin: 0 auto; line-height: 1.7; position: relative; }
+
+    /* ── CATEGORY FILTER ── */
+    .filter-bar { background: white; border-bottom: 1px solid var(--light-gray); padding: 0 48px; position: sticky; top: 72px; z-index: 50; }
+    .filter-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 4px; overflow-x: auto; padding: 14px 0; scrollbar-width: none; }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-btn { padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1.5px solid var(--light-gray); background: white; color: var(--gray); cursor: pointer; white-space: nowrap; transition: all 0.15s; }
+    .filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: white; }
+
+    /* ── FEATURED POST ── */
+    .featured-section { padding: 72px 48px 0; }
+    .featured-inner { max-width: 1200px; margin: 0 auto; }
+    .featured-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
+
+    .featured-card {
+      display: grid; grid-template-columns: 1fr 1fr; border-radius: 18px; overflow: hidden;
+      background: var(--offwhite); border: 1px solid var(--light-gray);
+      text-decoration: none; color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .featured-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+    .featured-img { background: var(--navy); min-height: 360px; position: relative; overflow: hidden; }
+    .featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-img-placeholder {
+      width: 100%; height: 100%; min-height: 360px;
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 72px;
+    }
+    .featured-body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; }
+    .post-category { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+    .featured-body h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 2.5vw, 2.4rem); font-weight: 900; color: var(--navy); text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; }
+    .featured-body p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 28px; }
+    .post-meta { display: flex; gap: 20px; align-items: center; font-size: 12px; color: var(--gray); margin-bottom: 24px; }
+    .post-meta span { display: flex; align-items: center; gap: 5px; }
+    .read-more { display: inline-flex; align-items: center; gap: 8px; color: var(--red); font-weight: 700; font-size: 14px; text-decoration: none; transition: gap 0.2s; }
+    .read-more:hover { gap: 12px; }
+
+    /* ── POST GRID ── */
+    .posts-section { padding: 56px 48px 96px; }
+    .posts-inner { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--navy); text-transform: uppercase; margin-bottom: 40px; line-height: 1.05; }
+
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+    .post-card {
+      background: white; border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--light-gray);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.09); }
+
+    .post-thumb {
+      height: 210px; overflow: hidden; position: relative;
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+    }
+    .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .post-card:hover .post-thumb img { transform: scale(1.04); }
+    .post-thumb-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+    .post-thumb-badge { position: absolute; top: 14px; left: 14px; background: var(--red); color: white; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+
+    .post-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .post-card-body .post-category { margin-bottom: 10px; }
+    .post-card-body h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--navy); text-transform: uppercase; line-height: 1.2; margin-bottom: 10px; }
+    .post-card-body p { font-size: 13.5px; color: var(--gray); line-height: 1.65; margin-bottom: 20px; flex: 1; }
+    .post-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--light-gray); }
+    .post-date { font-size: 12px; color: var(--gray); }
+    .post-read-time { font-size: 12px; color: var(--gray); }
+
+    /* ── NEWSLETTER CTA ── */
+    .newsletter-section { background: var(--navy); padding: 80px 48px; text-align: center; }
+    .newsletter-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 12px; }
+    .newsletter-section p { color: rgba(255,255,255,0.68); font-size: 1rem; max-width: 520px; margin: 0 auto 36px; line-height: 1.7; }
+    .nl-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .nl-input { flex: 1; min-width: 240px; padding: 14px 18px; border-radius: 8px; border: none; font-family: var(--font-body); font-size: 14px; background: rgba(255,255,255,0.1); color: white; outline: none; }
+    .nl-input::placeholder { color: rgba(255,255,255,0.45); }
+    .nl-input:focus { background: rgba(255,255,255,0.15); }
+    .nl-btn { background: var(--red); color: white; border: none; border-radius: 8px; padding: 14px 28px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .nl-btn:hover { background: var(--red-dark); }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--red); padding: 72px 48px; text-align: center; }
+    .cta-band h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 12px; }
+    .cta-band p { color: rgba(255,255,255,0.85); font-size: 1rem; max-width: 500px; margin: 0 auto 32px; line-height: 1.65; }
+    .btn-white { background: white; color: var(--red); padding: 16px 40px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-block; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 48px; text-align: center; }
+    footer p { font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .posts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-hero { padding: 100px 24px 56px; }
+      .filter-bar { padding: 0 20px; }
+      .featured-section, .posts-section { padding: 48px 24px 0; }
+      .posts-section { padding-bottom: 64px; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-img, .featured-img-placeholder { min-height: 240px; }
+      .featured-body { padding: 28px 24px; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .newsletter-section, .cta-band { padding: 64px 24px; }
+      footer { padding: 32px 24px; }
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-brand .nav-logo { margin-bottom: 12px; display: inline-flex; }
+    .footer-links h4 { color: white; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="./index.html" class="nav-logo">
+    <img src="./logo-white.png" alt="Premiere Outdoor Movies" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li class="nav-dropdown" id="pkgDrop">
+      <a href="#">Packages</a>
+      <div class="dropdown-menu">
+        <a href="./backyard-party-package.html"><span class="dd-icon">🏡</span> Backyard Party</a>
+        <a href="./indoor-event-package.html"><span class="dd-icon">🏠</span> Indoor Event</a>
+        <a href="./premiere-event-package.html"><span class="dd-icon">🎬</span> Premiere Event</a>
+        <a href="./blockbuster-event-package.html"><span class="dd-icon">🎆</span> Blockbuster Event</a>
+        <a href="./ultimate-event-package.html"><span class="dd-icon">🌟</span> Ultimate Event</a>
+        <a href="./drive-in-package.html"><span class="dd-icon">🚗</span> Drive-In Movie</a>
+      </div>
+    </li>
+    <li class="nav-dropdown" id="locDrop">
+      <a href="#">Locations</a>
+      <div class="dropdown-menu">
+        <a href="./new-jersey.html"><span class="dd-icon">🗽</span> New Jersey</a>
+        <a href="./philadelphia.html"><span class="dd-icon">🔔</span> Philadelphia Area</a>
+        <a href="./eastern-pa.html"><span class="dd-icon">🌾</span> Eastern Pennsylvania</a>
+        <a href="./new-york.html"><span class="dd-icon">🍎</span> New York</a>
+        <a href="./connecticut.html"><span class="dd-icon">⚓</span> Connecticut</a>
+        <a href="./massachusetts.html"><span class="dd-icon">🦞</span> Massachusetts</a>
+        <a href="./delaware.html"><span class="dd-icon">💎</span> Delaware</a>
+        <a href="./maryland.html"><span class="dd-icon">🦀</span> Maryland</a>
+        <a href="./virginia.html"><span class="dd-icon">🌸</span> Virginia</a>
+        <a href="./florida.html"><span class="dd-icon">🌴</span> Florida</a>
+        <hr class="dd-divider" />
+        <p class="dd-label">Coming Soon — Operator Wanted</p>
+        <a href="./north-carolina.html"><span class="dd-icon">🌲</span> North Carolina</a>
+        <a href="./south-carolina.html"><span class="dd-icon">🌴</span> South Carolina</a>
+        <a href="./georgia.html"><span class="dd-icon">🍑</span> Georgia</a>
+        <a href="./ohio.html"><span class="dd-icon">🌻</span> Ohio</a>
+      </div>
+    </li>
+    <li><a href="./reviews.html">Reviews</a></li>
+    <li><a href="./blog.html" style="color:white;">Blog</a></li>
+    <li><a href="./careers.html">Careers</a></li>
+  </ul>
+  <a href="./get-a-quote.html" class="nav-cta">Get a Free Quote</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="./index.html">Home</a>
+  <a href="./new-jersey.html">Locations</a>
+  <a href="./reviews.html">Reviews</a>
+  <a href="./blog.html" style="color:white;">Blog</a>
+  <a href="./careers.html">Careers</a>
+  <a href="./get-a-quote.html" class="mobile-cta">Get a Free Quote</a>
+</nav>
+
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <p class="hero-eyebrow">Tips, Ideas &amp; Inspiration</p>
+  <h1>The Outdoor<br>Cinema Blog</h1>
+  <p>Expert advice on planning outdoor movie events — from backyard nights to full-scale community screenings. Written by people who've set up thousands of them.</p>
+</section>
+
+
+<!-- ── CATEGORY FILTER ── -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-category="all">All Posts</button>
+    <button class="filter-btn" data-category="planning">Event Planning</button>
+    <button class="filter-btn" data-category="equipment">Equipment &amp; Tech</button>
+    <button class="filter-btn" data-category="ideas">Ideas &amp; Inspiration</button>
+    <button class="filter-btn" data-category="corporate">Corporate Events</button>
+    <button class="filter-btn" data-category="community">Community &amp; HOA</button>
+    <button class="filter-btn" data-category="seasonal">Seasonal Tips</button>
+  </div>
+</div>
+
+
+<!-- ── FEATURED POST ── -->
+<section class="featured-section">
+  <div class="featured-inner">
+    <p class="featured-label">⭐ Featured Post</p>
+    <a href="#" class="featured-card" data-category="planning">
+      <div class="featured-img">
+        <img src="./ny-hero-1.jpg" alt="How to Plan an Outdoor Movie Night" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="featured-img-placeholder" style="display:none;">🎬</div>
+      </div>
+      <div class="featured-body">
+        <span class="post-category">Event Planning</span>
+        <h2>The Complete Guide to Planning an Outdoor Movie Night</h2>
+        <div class="post-meta">
+          <span>📅 April 2025</span>
+          <span>⏱ 10 min read</span>
+        </div>
+        <p>Everything you need to know before your first outdoor movie event — from choosing the right screen size and picking the perfect movie to seating layouts, sound setup, and keeping guests comfortable from start to finish.</p>
+        <span class="read-more">Read the Full Guide →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<!-- ── POST GRID ── -->
+<section class="posts-section">
+  <div class="posts-inner">
+    <p class="section-eyebrow">Latest Posts</p>
+    <h2 class="section-title">From the Blog</h2>
+
+    <div class="posts-grid" id="postsGrid">
+
+      <!-- POST 1 -->
+      <a href="#" class="post-card" data-category="ideas">
+        <div class="post-thumb">
+          <img src="./ny-hero-2.jpg" alt="Backyard Movie Night Ideas" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="post-thumb-placeholder" style="display:none;">🏡</div>
+          <span class="post-thumb-badge">Ideas &amp; Inspiration</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Ideas &amp; Inspiration</span>
+          <h3>15 Backyard Movie Night Ideas Your Guests Will Love</h3>
+          <p>Transform your backyard into a real cinema experience. From themed snack stations and cozy seating setups to movie selection tips and lighting ideas that set the perfect mood.</p>
+          <div class="post-card-footer">
+            <span class="post-date">March 2025</span>
+            <span class="post-read-time">8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 2 -->
+      <a href="#" class="post-card" data-category="corporate">
+        <div class="post-thumb">
+          <img src="./ny-hero-3.jpg" alt="Corporate Outdoor Movie Events" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="post-thumb-placeholder" style="display:none;">🏢</div>
+          <span class="post-thumb-badge">Corporate Events</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Corporate Events</span>
+          <h3>Why Outdoor Movie Events Are the Perfect Corporate Team Builder</h3>
+          <p>Company picnics and happy hours are fine. An outdoor movie night is unforgettable. Here's why more HR teams and event coordinators are adding cinema nights to their calendar.</p>
+          <div class="post-card-footer">
+            <span class="post-date">February 2025</span>
+            <span class="post-read-time">6 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 3 -->
+      <a href="#" class="post-card" data-category="equipment">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">📽️</div>
+          <span class="post-thumb-badge">Equipment &amp; Tech</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Equipment &amp; Tech</span>
+          <h3>Inflatable Movie Screens: What Size Do You Actually Need?</h3>
+          <p>Screen size isn't one-size-fits-all. We break down the math — how many guests, how far they'll sit, ambient light, and more — so you always get a picture worth watching.</p>
+          <div class="post-card-footer">
+            <span class="post-date">January 2025</span>
+            <span class="post-read-time">7 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 4 -->
+      <a href="#" class="post-card" data-category="community">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🏘️</div>
+          <span class="post-thumb-badge">Community &amp; HOA</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Community &amp; HOA</span>
+          <h3>How to Run a Successful HOA Movie Night (Without the Headaches)</h3>
+          <p>Outdoor movie nights are one of the most popular HOA events going. We share the logistics playbook used at hundreds of community screenings — permits, timing, vendor coordination and all.</p>
+          <div class="post-card-footer">
+            <span class="post-date">December 2024</span>
+            <span class="post-read-time">9 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 5 -->
+      <a href="#" class="post-card" data-category="seasonal">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🌙</div>
+          <span class="post-thumb-badge">Seasonal Tips</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Seasonal Tips</span>
+          <h3>Outdoor Movie Night in the Heat: 8 Tips to Keep Guests Cool</h3>
+          <p>Summer is peak outdoor movie season — but heat and humidity can make or break the experience. Here's how to set up your event so everyone stays comfortable even on warm nights.</p>
+          <div class="post-card-footer">
+            <span class="post-date">November 2024</span>
+            <span class="post-read-time">5 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 6 -->
+      <a href="#" class="post-card" data-category="planning">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🎟️</div>
+          <span class="post-thumb-badge">Event Planning</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Event Planning</span>
+          <h3>Outdoor Movie Rental Pricing: What to Expect and What to Ask</h3>
+          <p>Prices vary widely in this industry. We break down what's typically included, what usually costs extra, and the right questions to ask any vendor before you sign anything.</p>
+          <div class="post-card-footer">
+            <span class="post-date">October 2024</span>
+            <span class="post-read-time">6 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 7 -->
+      <a href="#" class="post-card" data-category="ideas">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🎃</div>
+          <span class="post-thumb-badge">Ideas &amp; Inspiration</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Ideas &amp; Inspiration</span>
+          <h3>The Best Themed Outdoor Movie Night Ideas (By Season)</h3>
+          <p>From Halloween horror nights and holiday classics to summer blockbusters and drive-in nostalgia — themed movie nights take an already great event to the next level.</p>
+          <div class="post-card-footer">
+            <span class="post-date">September 2024</span>
+            <span class="post-read-time">7 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 8 -->
+      <a href="#" class="post-card" data-category="community">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🏫</div>
+          <span class="post-thumb-badge">Community &amp; HOA</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Community &amp; HOA</span>
+          <h3>School Movie Night Fundraisers: A Complete Planning Guide</h3>
+          <p>Outdoor movie nights are one of the easiest PTA fundraisers to pull off — and one of the most profitable. Here's a step-by-step guide from venue selection to ticket sales.</p>
+          <div class="post-card-footer">
+            <span class="post-date">August 2024</span>
+            <span class="post-read-time">8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- POST 9 -->
+      <a href="#" class="post-card" data-category="equipment">
+        <div class="post-thumb">
+          <div class="post-thumb-placeholder">🔊</div>
+          <span class="post-thumb-badge">Equipment &amp; Tech</span>
+        </div>
+        <div class="post-card-body">
+          <span class="post-category">Equipment &amp; Tech</span>
+          <h3>Outdoor Movie Sound Systems: Why Audio Makes or Breaks the Experience</h3>
+          <p>A stunning picture means nothing if guests can't hear clearly. We cover how outdoor sound works differently than indoor, what to look for in a system, and why cheap speakers fall flat.</p>
+          <div class="post-card-footer">
+            <span class="post-date">July 2024</span>
+            <span class="post-read-time">6 min read</span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /posts-grid -->
+
+    <!-- No results message (hidden by default) -->
+    <div id="noResults" style="display:none; text-align:center; padding:64px 24px; color:var(--gray);">
+      <div style="font-size:48px; margin-bottom:16px;">🎬</div>
+      <p style="font-size:16px;">No posts in this category yet — check back soon!</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── NEWSLETTER CTA ── -->
+<section class="newsletter-section">
+  <h2>Get New Posts in Your Inbox</h2>
+  <p>We publish new outdoor movie tips and ideas twice a month. No spam — just useful stuff for anyone planning an outdoor cinema event.</p>
+  <form class="nl-form" onsubmit="handleNLSubmit(event)">
+    <input type="email" class="nl-input" placeholder="Your email address" required />
+    <button type="submit" class="nl-btn">Subscribe</button>
+  </form>
+</section>
+
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <h2>Ready to Book Your Event?</h2>
+  <p>We've been running outdoor movie events since 2009. Let us handle every detail so you can enjoy the show.</p>
+  <a href="./get-a-quote.html" class="btn-white">Get a Free Quote</a>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="./index.html" class="nav-logo"><img src="./logo-white.png" alt="Premiere Outdoor Movies" /></a>
+      <p style="font-size:13px; color:rgba(255,255,255,0.5); max-width:240px; line-height:1.7; margin-top:12px;">Professional outdoor cinema events since 2009. Serving 10 states with full-service crews and state-of-the-art equipment.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Packages</h4>
+      <ul>
+        <li><a href="./backyard-party-package.html">Backyard Party</a></li>
+        <li><a href="./indoor-event-package.html">Indoor Event</a></li>
+        <li><a href="./premiere-event-package.html">Premiere Event</a></li>
+        <li><a href="./blockbuster-event-package.html">Blockbuster Event</a></li>
+        <li><a href="./ultimate-event-package.html">Ultimate Event</a></li>
+        <li><a href="./drive-in-package.html">Drive-In Event</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Active Markets</h4>
+      <ul>
+        <li><a href="./new-jersey.html">New Jersey</a></li>
+        <li><a href="./philadelphia.html">Philadelphia Area</a></li>
+        <li><a href="./eastern-pa.html">Eastern Pennsylvania</a></li>
+        <li><a href="./new-york.html">New York</a></li>
+        <li><a href="./connecticut.html">Connecticut</a></li>
+        <li><a href="./massachusetts.html">Massachusetts</a></li>
+        <li><a href="./delaware.html">Delaware</a></li>
+        <li><a href="./maryland.html">Maryland</a></li>
+        <li><a href="./virginia.html">Virginia</a></li>
+        <li><a href="./florida.html">Florida</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Expanding To</h4>
+      <ul>
+        <li><a href="./north-carolina.html">North Carolina</a></li>
+        <li><a href="./south-carolina.html">South Carolina</a></li>
+        <li><a href="./georgia.html">Georgia</a></li>
+        <li><a href="./ohio.html">Ohio</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./reviews.html">Reviews</a></li>
+        <li><a href="./careers.html">Careers</a></li>
+        <li><a href="./get-a-quote.html">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Premiere Outdoor Movies. All rights reserved.</span>
+    <a href="./index.html">Home</a>
+  </div>
+</footer>
+
+
+<script>
+  // ── Nav dropdowns ──
+  ['pkgDrop', 'locDrop'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let t;
+    el.addEventListener('mouseenter', () => { clearTimeout(t); el.classList.add('open'); });
+    el.addEventListener('mouseleave', () => { t = setTimeout(() => el.classList.remove('open'), 200); });
+    el.querySelectorAll('.dropdown-menu a').forEach(a => a.addEventListener('click', () => el.classList.remove('open')));
+    document.addEventListener('click', e => { if (!el.contains(e.target)) el.classList.remove('open'); });
+  });
+
+  // ── Hamburger ──
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  // ── Category filter ──
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#postsGrid .post-card');
+  const noResults = document.getElementById('noResults');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cat = btn.dataset.category;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const match = cat === 'all' || card.dataset.category === cat;
+        card.style.display = match ? 'flex' : 'none';
+        if (match) visible++;
+      });
+
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    });
+  });
+
+  // ── Newsletter ──
+  function handleNLSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✓ You\'re in!';
+    btn.style.background = '#1a6b3a';
+    e.target.querySelector('input').disabled = true;
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>

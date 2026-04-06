@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Reviews | Premiere Outdoor Movies</title>
+  <meta name="description" content="See what customers are saying about Premiere Outdoor Movies. Hundreds of 5-star reviews from HOAs, schools, corporate clients, and families across 10 states. Serving outdoor cinema events since 2009." />
+  <link rel="canonical" href="https://www.premiereoutdoormovie.com/reviews/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Customer Reviews | Premiere Outdoor Movies" />
+  <meta property="og:description" content="Hundreds of 5-star reviews from customers across 10 states. See why Premiere Outdoor Movies is the most trusted outdoor cinema company in the region." />
+  <meta property="og:image" content="https://www.premiereoutdoormovie.com/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Premiere Outdoor Movies",
+    "url": "https://www.premiereoutdoormovie.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "200"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #C8102E; --red-dark: #a00d24; --navy: #0D1B2A; --navy-light: #162033; --charcoal: #1a1a1a; --offwhite: #f7f6f4; --gray: #6b7280; --light-gray: #e5e7eb; --white: #ffffff; --font-display: 'Barlow Condensed', sans-serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(13,27,42,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 52px; width: auto; mix-blend-mode: screen; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 500; text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; }
+    .nav-links a:hover { color: white; }
+    .nav-cta { background: var(--red); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .nav-dropdown > a::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid rgba(255,255,255,0.6); transition: transform 0.2s; margin-top: 1px; }
+    .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: white; }
+    .nav-dropdown.open > a, .nav-dropdown > a:hover { color: white; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 240px; z-index: 200;   max-height: calc(100vh - 90px); overflow-y: auto; }
+    .dropdown-menu::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; color: rgba(255,255,255,0.8) !important; font-size: 13px !important; font-weight: 500 !important; text-decoration: none; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    .dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: white !important; }
+    .dropdown-menu .dd-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 6px 4px; }
+    .dropdown-menu .dd-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9); padding: 6px 12px 2px; display: block; }
+    .dropdown-menu a .dd-icon { font-size: 15px; width: 20px; text-align: center; flex-shrink: 0; }
+    .dropdown-menu .pkg-price { margin-left: auto; font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 400; }
+    .dropdown-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 4px 8px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: rgba(13,27,42,0.99); z-index: 99; padding: 24px; flex-direction: column; overflow-y: auto; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-weight: 500; }
+    .mobile-menu .mobile-cta { color: var(--red) !important; font-weight: 700 !important; border-bottom: none; }
+
+    /* ── PAGE HERO ── */
+    .page-hero { background: var(--navy); margin-top: 72px; padding: 80px 48px; text-align: center; }
+    .page-hero .eyebrow { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: white; text-transform: uppercase; line-height: 1.05; margin-bottom: 20px; }
+    .page-hero h1 em { color: var(--red); font-style: normal; }
+    .page-hero p { color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
+    .rating-summary { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .rating-big { text-align: center; }
+    .rating-number { font-family: var(--font-display); font-size: 4rem; font-weight: 900; color: white; line-height: 1; }
+    .stars-row { color: #FBBF24; font-size: 1.4rem; letter-spacing: 2px; margin: 6px 0; }
+    .rating-label { font-size: 13px; color: rgba(255,255,255,0.5); }
+    .rating-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.15); }
+    .rating-stat { text-align: center; }
+    .rating-stat-num { font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--red); }
+    .rating-stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: var(--navy); padding: 20px 48px; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 500; }
+    .trust-icon { font-size: 18px; }
+
+    /* ── FEATURED REVIEWS ── */
+    .featured-section { padding: 96px 48px; background: var(--offwhite); }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; text-transform: uppercase; color: var(--navy); margin-bottom: 48px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .review-card { background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+    .review-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.10); }
+    .review-stars { color: #FBBF24; font-size: 1.1rem; letter-spacing: 2px; }
+    .review-text { font-size: 15px; color: var(--charcoal); line-height: 1.7; flex-grow: 1; font-style: italic; }
+    .review-text::before { content: '\201C'; }
+    .review-text::after { content: '\201D'; }
+    .review-footer { display: flex; align-items: center; gap: 14px; padding-top: 16px; border-top: 1px solid var(--light-gray); }
+    .reviewer-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: white; flex-shrink: 0; }
+    .reviewer-name { font-weight: 600; font-size: 14px; color: var(--charcoal); }
+    .reviewer-meta { font-size: 12px; color: var(--gray); margin-top: 2px; }
+    .google-badge { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--gray); flex-shrink: 0; }
+    .google-g { font-size: 14px; font-weight: 700; background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── LIVE FEED SECTION ── */
+    .livefeed-section { padding: 96px 48px; background: white; }
+    .livefeed-section .section-title { color: var(--navy); margin-bottom: 16px; }
+    .livefeed-intro { font-size: 1rem; color: var(--gray); line-height: 1.7; max-width: 600px; margin-bottom: 48px; }
+    /* Elfsight live widget active */
+
+    /* ── LEAVE A REVIEW ── */
+    .leave-review-section { padding: 80px 48px; background: var(--navy); text-align: center; }
+    .leave-review-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 16px; }
+    .leave-review-section p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 560px; margin: 0 auto 36px; line-height: 1.7; }
+    .review-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-red { background: var(--red); color: white; padding: 16px 36px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .btn-outline-white { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.35); padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; transition: border-color 0.2s, background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    /* ── CTA BANNER ── */
+    .cta-banner { background: var(--red); padding: 80px 48px; text-align: center; }
+    .cta-banner h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; text-transform: uppercase; margin-bottom: 16px; }
+    .cta-banner p { color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 32px; }
+    .cta-banner .btn-white { background: white; color: var(--red); padding: 16px 40px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-block; transition: transform 0.15s; }
+    .cta-banner .btn-white:hover { transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 48px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-brand .nav-logo { margin-bottom: 12px; display: inline-flex; }
+    .footer-copy { font-size: 13px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 64px 24px; }
+      .rating-divider { display: none; }
+      .featured-section, .livefeed-section { padding: 64px 24px; }
+      .leave-review-section, .cta-banner { padding: 64px 24px; }
+      .trust-bar { padding: 20px 24px; gap: 24px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-brand .nav-logo { margin-bottom: 12px; display: inline-flex; }
+    .footer-links h4 { color: white; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-logo">
+    <img src="./logo-white.png" alt="Premiere Outdoor Movies" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li class="nav-dropdown" id="pkgDrop">
+      <a href="#">Packages</a>
+      <div class="dropdown-menu">
+        <a href="./indoor-event-package.html"><span class="dd-icon">🏠</span> Indoor Event <span class="pkg-price">from $399</span></a>
+        <a href="./backyard-party-package.html"><span class="dd-icon">🏡</span> Backyard Party <span class="pkg-price">from $449</span></a>
+        <a href="./premiere-event-package.html"><span class="dd-icon">⭐</span> Premiere Event <span class="pkg-price">from $799</span></a>
+        <a href="./blockbuster-event-package.html"><span class="dd-icon">🎬</span> Blockbuster Event <span class="pkg-price">from $899</span></a>
+        <div class="dropdown-divider"></div>
+        <a href="./ultimate-event-package.html"><span class="dd-icon">🏟</span> Ultimate Event <span class="pkg-price">from $2,300</span></a>
+        <a href="./drive-in-package.html"><span class="dd-icon">🚗</span> Drive-In Event <span class="pkg-price">custom quote</span></a>
+      </div>
+    </li>
+    <li class="nav-dropdown" id="locDrop">
+      <a href="#">Locations</a>
+      <div class="dropdown-menu">
+        <a href="./new-jersey.html"><span class="dd-icon">🎡</span> New Jersey</a>
+        <a href="./philadelphia.html"><span class="dd-icon">🔔</span> Philadelphia Area</a>
+        <a href="./eastern-pa.html"><span class="dd-icon">🌾</span> Eastern Pennsylvania</a>
+        <a href="./delaware.html"><span class="dd-icon">💎</span> Delaware</a>
+        <a href="./maryland.html"><span class="dd-icon">🦀</span> Maryland</a>
+        <a href="./virginia.html"><span class="dd-icon">🌸</span> Virginia</a>
+        <a href="./new-york.html"><span class="dd-icon">🗽</span> New York</a>
+        <a href="./connecticut.html"><span class="dd-icon">🌿</span> Connecticut</a>
+        <a href="./massachusetts.html"><span class="dd-icon">🦞</span> Massachusetts</a>
+        <a href="./florida.html"><span class="dd-icon">🌴</span> Florida</a>
+        <hr class="dd-divider" />
+        <p class="dd-label">Coming Soon — Operator Wanted</p>
+        <a href="./north-carolina.html"><span class="dd-icon">🌲</span> North Carolina</a>
+        <a href="./south-carolina.html"><span class="dd-icon">🌴</span> South Carolina</a>
+        <a href="./georgia.html"><span class="dd-icon">🍑</span> Georgia</a>
+        <a href="./ohio.html"><span class="dd-icon">🌻</span> Ohio</a>
+      </div>
+    </li>
+    <li><a href="./reviews.html" style="color:white;">Reviews</a></li>
+    <li><a href="./get-a-quote.html" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="./index.html">Home</a>
+  <a href="./indoor-event-package.html">Indoor Event</a>
+  <a href="./backyard-party-package.html">Backyard Party</a>
+  <a href="./premiere-event-package.html">Premiere Event</a>
+  <a href="./blockbuster-event-package.html">Blockbuster Event</a>
+  <a href="./ultimate-event-package.html">Ultimate Event</a>
+  <a href="./drive-in-package.html">Drive-In Event</a>
+  <a href="./reviews.html">Reviews</a>
+  <a href="./get-a-quote.html" class="mobile-cta">Get a Free Quote</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="eyebrow">Customer Reviews</div>
+  <h1>Don't Take Our Word<br><em>For It</em></h1>
+  <p>Over 15 years and thousands of events — here's what our customers have to say about the Premiere Outdoor Movies experience.</p>
+  <div class="rating-summary">
+    <div class="rating-big">
+      <div class="rating-number">5.0</div>
+      <div class="stars-row">★★★★★</div>
+      <div class="rating-label">Average Rating</div>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-stat">
+      <div class="rating-stat-num">200+</div>
+      <div class="rating-stat-label">Google Reviews</div>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-stat">
+      <div class="rating-stat-num">1,000+</div>
+      <div class="rating-stat-label">Events Produced</div>
+    </div>
+    <div class="rating-divider"></div>
+    <div class="rating-stat">
+      <div class="rating-stat-num">15+</div>
+      <div class="rating-stat-label">Years in Business</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">⭐</span> 5-Star Rated on Google</div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Serving 10 States</div>
+  <div class="trust-item"><span class="trust-icon">🎬</span> HOAs, Schools, Corporates & More</div>
+  <div class="trust-item"><span class="trust-icon">📅</span> In Business Since 2009</div>
+</div>
+
+<!-- ── FEATURED REVIEWS ── -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-eyebrow">Featured Reviews</div>
+    <h2 class="section-title">What Our Customers Are Saying</h2>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">Premiere Outdoor Movies made our HOA movie night absolutely unforgettable. The setup was flawless, the crew was professional and friendly, and the picture quality blew everyone away. Our neighbors are already asking when we're doing it again!</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#1a3a5c;">S</div>
+          <div>
+            <div class="reviewer-name">Sarah M.</div>
+            <div class="reviewer-meta">HOA Board Member · New Jersey</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">We hired Premiere for our company's outdoor team-building event. From booking to teardown, everything was seamless. They showed up on time, handled everything professionally, and our employees absolutely loved it. Will definitely use them again.</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#2d4a1e;">J</div>
+          <div>
+            <div class="reviewer-name">James T.</div>
+            <div class="reviewer-meta">Corporate Event Coordinator · Philadelphia</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">Our school fundraiser was a massive hit thanks to Premiere. They were communicative throughout the planning process and the night itself went perfectly. Kids and parents both had an amazing time. Highly recommend for any school event!</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#5c1a1a;">L</div>
+          <div>
+            <div class="reviewer-name">Lisa R.</div>
+            <div class="reviewer-meta">PTA President · Connecticut</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">I've used Premiere Outdoor Movies three times now for our neighborhood events and they never disappoint. Reliable, professional, and genuinely fun to work with. The big screen setup is always a crowd-pleaser. These guys are the real deal.</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#1a3a3a;">D</div>
+          <div>
+            <div class="reviewer-name">David K.</div>
+            <div class="reviewer-meta">Repeat Customer · Maryland</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">We booked Premiere for a surprise backyard birthday party and it was the highlight of the night. The team was discreet during setup, the equipment was top-notch, and the movie under the stars was pure magic. Our guests couldn't stop talking about it.</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#3a1a5c;">A</div>
+          <div>
+            <div class="reviewer-name">Amanda W.</div>
+            <div class="reviewer-meta">Private Event · New York</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">As a community events director, I've worked with a lot of vendors. Premiere stands out for their responsiveness, professionalism, and the quality of their equipment. Our drive-in event drew over 200 cars and went off without a single hitch.</div>
+        <div class="review-footer">
+          <div class="reviewer-avatar" style="background:#1a4a2a;">M</div>
+          <div>
+            <div class="reviewer-name">Michael B.</div>
+            <div class="reviewer-meta">Community Events Director · Virginia</div>
+          </div>
+          <div class="google-badge"><span class="google-g">G</span> Google</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── LIVE GOOGLE REVIEWS FEED ── -->
+<section class="livefeed-section">
+  <div class="container">
+    <div class="section-eyebrow">Live Google Reviews</div>
+    <h2 class="section-title">More from Our Customers</h2>
+    <p class="livefeed-intro">Our Google reviews are updated in real time. See the latest feedback from customers across all of our territories.</p>
+
+    <!-- Elfsight Google Reviews Widget -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-b7d8adef-cd45-4d0e-85b9-0ebee9dcb0dd" data-elfsight-app-lazy></div>
+
+  </div>
+</section>
+
+<!-- ── LEAVE A REVIEW ── -->
+<section class="leave-review-section">
+  <h2>Had a Great Experience?</h2>
+  <p>Your review helps other families and event planners find us — and it means the world to our team. Takes less than a minute on Google.</p>
+  <div class="review-btns">
+    <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener" class="btn-red">
+      <span class="google-g" style="-webkit-text-fill-color:white; background:none; color:white;">★</span> Leave a Google Review
+    </a>
+    <a href="./get-a-quote.html" class="btn-outline-white">Book Your Event</a>
+  </div>
+  <p style="font-size:12px; color:rgba(255,255,255,0.35); margin-top:24px;">Replace YOUR_PLACE_ID in the link above with your Google Business Place ID before launching.</p>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="cta-banner">
+  <h2>Ready to Create Your Own<br><em>5-Star Experience?</em></h2>
+  <p>Join hundreds of happy customers. Get a free quote for your outdoor movie event today.</p>
+  <a href="./get-a-quote.html" class="btn-white">Get a Free Quote</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="./index.html" class="nav-logo"><img src="./logo-white.png" alt="Premiere Outdoor Movies" /></a>
+      <p style="font-size:13px; color:rgba(255,255,255,0.5); max-width:240px; line-height:1.7; margin-top:12px;">Professional outdoor cinema events since 2009. Serving 10 states with full-service crews and state-of-the-art equipment.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Packages</h4>
+      <ul>
+        <li><a href="./backyard-party-package.html">Backyard Party</a></li>
+        <li><a href="./indoor-event-package.html">Indoor Event</a></li>
+        <li><a href="./premiere-event-package.html">Premiere Event</a></li>
+        <li><a href="./blockbuster-event-package.html">Blockbuster Event</a></li>
+        <li><a href="./ultimate-event-package.html">Ultimate Event</a></li>
+        <li><a href="./drive-in-package.html">Drive-In Event</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Active Markets</h4>
+      <ul>
+        <li><a href="./new-jersey.html">New Jersey</a></li>
+        <li><a href="./philadelphia.html">Philadelphia Area</a></li>
+        <li><a href="./eastern-pa.html">Eastern Pennsylvania</a></li>
+        <li><a href="./new-york.html">New York</a></li>
+        <li><a href="./connecticut.html">Connecticut</a></li>
+        <li><a href="./massachusetts.html">Massachusetts</a></li>
+        <li><a href="./delaware.html">Delaware</a></li>
+        <li><a href="./maryland.html">Maryland</a></li>
+        <li><a href="./virginia.html">Virginia</a></li>
+        <li><a href="./florida.html">Florida</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Expanding To</h4>
+      <ul>
+        <li><a href="./north-carolina.html">North Carolina</a></li>
+        <li><a href="./south-carolina.html">South Carolina</a></li>
+        <li><a href="./georgia.html">Georgia</a></li>
+        <li><a href="./ohio.html">Ohio</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./reviews.html">Reviews</a></li>
+        <li><a href="./careers.html">Careers</a></li>
+        <li><a href="./get-a-quote.html">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Premiere Outdoor Movies. All rights reserved.</span>
+    <a href="./index.html">Home</a>
+  </div>
+</footer>
+
+<script>
+  const pkgDrop = document.getElementById('pkgDrop');
+  if (pkgDrop) { let t; pkgDrop.addEventListener('mouseenter', () => { clearTimeout(t); pkgDrop.classList.add('open'); }); pkgDrop.addEventListener('mouseleave', () => { t = setTimeout(() => pkgDrop.classList.remove('open'), 200); }); }
+  const locDrop = document.getElementById('locDrop');
+  if (locDrop) { let t2; locDrop.addEventListener('mouseenter', () => { clearTimeout(t2); locDrop.classList.add('open'); }); locDrop.addEventListener('mouseleave', () => { t2 = setTimeout(() => locDrop.classList.remove('open'), 200); }); locDrop.querySelectorAll('.dropdown-menu a').forEach(l => l.addEventListener('click', () => locDrop.classList.remove('open'))); document.addEventListener('click', (e) => { if (!locDrop.contains(e.target)) locDrop.classList.remove('open'); }); }
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) { hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open')); }
+</script>
+</body>
+</html>
