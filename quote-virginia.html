@@ -30,7 +30,10 @@
       background: rgba(13,27,42,0.97);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
+      overflow: visible;
     }
+    .nav-links { overflow: visible; }
+    .nav-dropdown { position: relative; overflow: visible; }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { height: 44px; width: auto; display: block; }
     .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
@@ -41,7 +44,7 @@
     .nav-dropdown > a::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid rgba(255,255,255,0.6); transition: transform 0.2s; margin-top: 1px; }
     .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: white; }
     .nav-dropdown.open > a, .nav-dropdown > a:hover { color: white; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 230px; box-shadow: 0 20px 48px rgba(0,0,0,0.5); z-index: 200;   max-height: calc(100vh - 90px); overflow-y: auto; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 230px; box-shadow: 0 20px 48px rgba(0,0,0,0.5); z-index: 9999; max-height: calc(100vh - 90px); overflow-y: auto; }
     .dropdown-menu::before { content: ''; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
     .nav-dropdown.open .dropdown-menu { display: block; }
     .dropdown-menu::after { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 12px; height: 6px; background: rgba(13,27,42,0.98); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
