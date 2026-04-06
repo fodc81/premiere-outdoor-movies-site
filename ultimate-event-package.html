@@ -53,7 +53,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(13,27,42,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { height: 52px; width: auto; mix-blend-mode: screen; }
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links { overflow: visible; display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: white; }
     .nav-cta { background: var(--red); color: white; padding: 10px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
@@ -268,12 +268,12 @@
       .screen-selector-inner { gap: 10px; }
     }
 
-    .nav-dropdown { position: relative; }
+    .nav-dropdown { position: relative; overflow: visible; }
     .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
     .nav-dropdown > a::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid rgba(255,255,255,0.6); transition: transform 0.2s; margin-top: 1px; }
     .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: white; }
     .nav-dropdown.open > a, .nav-dropdown > a:hover { color: white; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 230px; box-shadow: 0 20px 48px rgba(0,0,0,0.5); z-index: 200; margin-top: 0;   max-height: calc(100vh - 90px); overflow-y: auto; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 230px; box-shadow: 0 20px 48px rgba(0,0,0,0.5); z-index: 9999; margin-top: 0;   max-height: calc(100vh - 90px); overflow-y: auto; }
     .dropdown-menu::before { content: ''; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
     .nav-dropdown.open .dropdown-menu { display: block; }
     .dropdown-menu::after { content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 12px; height: 6px; background: rgba(13,27,42,0.98); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
@@ -330,8 +330,6 @@
       cursor: default;
     }
 
-    .price-disclaimer { display: block; font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 8px; line-height: 1.4; font-style: italic; }
-    .quote-price-disclaimer { display: block; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 6px; line-height: 1.4; font-style: italic; }
   </style>
 </head>
 <body>
@@ -370,7 +368,27 @@
         </a>
       </div>
     </li>
-    <li><a href="#">Locations</a></li>
+    <li class="nav-dropdown" id="locDrop">
+      <a href="#">Locations</a>
+      <div class="dropdown-menu">
+        <a href="./new-jersey.html"><span class="dd-icon">🎡</span> New Jersey</a>
+        <a href="./philadelphia.html"><span class="dd-icon">🔔</span> Philadelphia Area</a>
+        <a href="./eastern-pa.html"><span class="dd-icon">🌿</span> Eastern Pennsylvania</a>
+        <a href="./delaware.html"><span class="dd-icon">💎</span> Delaware</a>
+        <a href="./maryland.html"><span class="dd-icon">🦀</span> Maryland</a>
+        <a href="./virginia.html"><span class="dd-icon">🌸</span> Virginia</a>
+        <a href="./new-york.html"><span class="dd-icon">🗽</span> New York</a>
+        <a href="./connecticut.html"><span class="dd-icon">🌳</span> Connecticut</a>
+        <a href="./massachusetts.html"><span class="dd-icon">🦞</span> Massachusetts</a>
+        <a href="./florida.html"><span class="dd-icon">🌴</span> Florida</a>
+        <hr class="dd-divider" />
+        <p class="dd-label">Coming Soon — Operator Wanted</p>
+        <a href="./north-carolina.html"><span class="dd-icon">🌲</span> North Carolina</a>
+        <a href="./south-carolina.html"><span class="dd-icon">🌴</span> South Carolina</a>
+        <a href="./georgia.html"><span class="dd-icon">🍑</span> Georgia</a>
+        <a href="./ohio.html"><span class="dd-icon">🌰</span> Ohio</a>
+      </div>
+    </li>
     <li><a href="#">About</a></li>
   </ul>
   <a href="#quote" class="nav-cta">Get a Quote</a>
@@ -410,7 +428,6 @@
       <span class="pkg-price-from">30 ft from</span>
       <span class="pkg-price-num">$2,300</span>
       <span class="pkg-price-guests">· 40 ft from $4,995 · 52 ft from $7,995</span>
-      <span class="price-disclaimer">Rates may vary depending on date, your location and event details.</span>
     </div>
     <div class="hero-cta-row">
       <a href="#quote" class="btn-primary">Get a Custom Quote →</a>
@@ -651,7 +668,6 @@
       <div class="quote-price-row">
         <span class="quote-price" id="sidebar-price">$2,300</span>
         <span class="quote-price-detail" id="sidebar-price-detail">30 ft screen<br/>40 ft: $4,995 · 52 ft: $7,995</span>
-        <span class="quote-price-disclaimer">Rates may vary depending on date, your location and event details.</span>
       </div>
       <div class="quote-features">
         <div class="quote-feature highlight">30, 40, or 52-ft AirScreen</div>
@@ -662,7 +678,7 @@
         <div class="quote-feature">Heavy-duty tiedowns &amp; anchoring</div>
         <div class="quote-feature">On-site crew entire event</div>
       </div>
-      <a href="./get-a-quote.html" class="quote-btn">Request a Quote →</a>
+      <a href="mailto:info@premiereoutdoormovie.com?subject=Ultimate Event Quote Request" class="quote-btn">Request a Quote →</a>
       <a href="tel:+18002451667" class="quote-call">📞 (800) 245-1667</a>
     </div>
 
@@ -867,7 +883,7 @@
     <h2 class="pkg-cta-title">READY TO GO<br/><span class="accent">MONUMENTAL?</span></h2>
     <p class="pkg-cta-sub">Large events need a partner with the experience and equipment to pull it off. Since 2009, Premiere Outdoor Movies has delivered hundreds of large-scale outdoor cinema experiences. Let's plan yours.</p>
     <div class="cta-buttons">
-      <a href="./get-a-quote.html" class="btn-primary">Get a Custom Quote →</a>
+      <a href="mailto:info@premiereoutdoormovie.com?subject=Ultimate Event Quote Request" class="btn-primary">Get a Custom Quote →</a>
       <a href="./blockbuster-event-package.html" class="btn-outline">← View Blockbuster Event</a>
     </div>
   </div>
@@ -1003,18 +1019,20 @@
     });
   });
 
-  // Packages dropdown with hover-intent
-  const navDropdown = document.getElementById('navDropdown');
-  if (navDropdown) {
-    let closeTimer;
-    navDropdown.addEventListener('mouseenter', () => {
-      clearTimeout(closeTimer);
-      navDropdown.classList.add('open');
-    });
-    navDropdown.addEventListener('mouseleave', () => {
-      closeTimer = setTimeout(() => navDropdown.classList.remove('open'), 200);
+  // Dropdown: hover + click for Packages and Locations
+  function initDropdown(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let timer;
+    el.addEventListener('mouseenter', () => { clearTimeout(timer); el.classList.add('open'); });
+    el.addEventListener('mouseleave', () => { timer = setTimeout(() => el.classList.remove('open'), 200); });
+    el.querySelector('a').addEventListener('click', (e) => {
+      e.preventDefault();
+      el.classList.toggle('open');
     });
   }
+  initDropdown('navDropdown');
+  initDropdown('locDrop');
 
   // Image protection
   (function() {
