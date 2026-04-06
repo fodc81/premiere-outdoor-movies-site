@@ -778,14 +778,6 @@
       text-align: center; padding: 14px; border-radius: 8px;
       font-weight: 600; font-size: 15px; border: none;
     }
-    .mobile-packages { border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .mobile-packages-header { color: rgba(255,255,255,0.8); font-size: 16px; font-weight: 500; padding: 12px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .mobile-packages-arrow { font-size: 18px; transition: transform 0.2s; color: rgba(255,255,255,0.4); }
-    .mobile-packages-header.open .mobile-packages-arrow { transform: rotate(90deg); color: white; }
-    .mobile-packages-list { display: none; padding-bottom: 8px; flex-direction: column; }
-    .mobile-packages-list.open { display: flex; }
-    .mobile-packages-list a { border-bottom: none !important; padding: 9px 0 9px 16px !important; color: rgba(255,255,255,0.6) !important; font-size: 14px !important; }
-    .mobile-packages-list a:hover { color: white !important; }
 
 
     /* ───────── TABLET (max 1024px) ───────── */
@@ -979,27 +971,20 @@
 </nav>
 
 <!-- Mobile menu -->
-<nav class="mobile-menu" id="mobileMenu">
-  <a href="./about.html">About</a>
-  <div class="mobile-packages">
-    <div class="mobile-packages-header" id="mobilePackagesToggle">
-      Packages <span class="mobile-packages-arrow">›</span>
-    </div>
-    <div class="mobile-packages-list" id="mobilePackagesList">
-      <a href="./backyard-party-package.html" style="padding-left:24px; font-size:14px;">🏡 Backyard Party</a>
-      <a href="./indoor-event-package.html" style="padding-left:24px; font-size:14px;">🏠 Indoor Event</a>
-      <a href="#" style="padding-left:24px; font-size:14px;">🎬 Premiere Event</a>
-      <a href="./blockbuster-event-package.html" style="padding-left:24px; font-size:14px;">🎆 Blockbuster Event</a>
-      <a href="./ultimate-event-package.html" style="padding-left:24px; font-size:14px;">🌟 Ultimate Event</a>
-      <a href="./drive-in-package.html" style="padding-left:24px; font-size:14px;">🚗 Drive-In Movie</a>
-    </div>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="./about.html">About Us</a>
+  <a href="./backyard-party-package.html" style="padding-left:20px; font-size:14px;">🏡 Backyard Party</a>
+  <a href="./indoor-event-package.html" style="padding-left:20px; font-size:14px;">🏠 Indoor Event</a>
+  <a href="./premiere-event-package.html" style="padding-left:20px; font-size:14px;">⭐ Premiere Event</a>
+  <a href="./blockbuster-event-package.html" style="padding-left:20px; font-size:14px;">🎆 Blockbuster Event</a>
+  <a href="./ultimate-event-package.html" style="padding-left:20px; font-size:14px;">🌟 Ultimate Event</a>
+  <a href="./drive-in-package.html" style="padding-left:20px; font-size:14px;">🚗 Drive-In Movie</a>
   <a href="./new-jersey.html">Locations</a>
   <a href="./reviews.html">Reviews</a>
   <a href="./blog.html">Blog</a>
   <a href="./careers.html">Careers</a>
   <a href="./get-a-quote.html" class="mobile-cta">Get a Free Quote</a>
-</nav>
+</div>
 
 
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
@@ -1484,16 +1469,6 @@
     hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open');
   });
-
-  // Mobile packages accordion
-  const pkgToggle = document.getElementById('mobilePackagesToggle');
-  const pkgList = document.getElementById('mobilePackagesList');
-  if (pkgToggle && pkgList) {
-    pkgToggle.addEventListener('click', () => {
-      pkgToggle.classList.toggle('open');
-      pkgList.classList.toggle('open');
-    });
-  }
 
   // Close mobile menu when a link is clicked
   mobileMenu.querySelectorAll('a').forEach(link => {
