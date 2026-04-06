@@ -552,16 +552,16 @@
 
   // ── Operator email routing by state ──
   const operatorEmails = {
-    'NJ':        'events@premiereoutdoormovies.com',
-    'PA-PHILLY': 'events@premiereoutdoormovies.com',
-    'PA-EAST':   'events@premiereoutdoormovies.com',
-    'NY':        'ny@premiereoutdoormovies.com',
-    'CT':        'ct@premiereoutdoormovies.com',
-    'MA':        'ma@premiereoutdoormovies.com',
-    'DE':        'de@premiereoutdoormovies.com',
-    'MD':        'md@premiereoutdoormovies.com',
-    'VA':        'va@premiereoutdoormovies.com',
-    'FL':        'fl@premiereoutdoormovies.com'
+    'NJ':        'events@premiereoutdoormovie.com',
+    'PA-PHILLY': 'events@premiereoutdoormovie.com',
+    'PA-EAST':   'events@premiereoutdoormovie.com',
+    'NY':        'ny@premiereoutdoormovie.com',
+    'CT':        'ct@premiereoutdoormovie.com',
+    'MA':        'ma@premiereoutdoormovie.com',
+    'DE':        'de@premiereoutdoormovie.com',
+    'MD':        'md@premiereoutdoormovie.com',
+    'VA':        'va@premiereoutdoormovie.com',
+    'FL':        'fl@premiereoutdoormovie.com'
   };
 
   // ── Form submission via Formspree ──
@@ -576,7 +576,7 @@
     const stateVal = document.getElementById('state').value;
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
-    const toEmail = operatorEmails[stateVal] || 'events@premiereoutdoormovies.com';
+    const toEmail = operatorEmails[stateVal] || 'events@premiereoutdoormovie.com';
 
     // Update subject with state info
     document.getElementById('formSubject').value = `CAREER APPLICATION — ${stateVal} — ${firstName} ${lastName}`;
