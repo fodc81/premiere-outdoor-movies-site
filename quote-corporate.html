@@ -493,19 +493,20 @@
 </footer>
 
 <script>
-  // ── Dropdown hover ──
-  const drop = document.getElementById('pkgDrop');
-  if (drop) {
-    let closeTimer;
-    drop.addEventListener('mouseenter', () => { clearTimeout(closeTimer); drop.classList.add('open'); });
-    drop.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => drop.classList.remove('open'), 200); });
+  // ── Dropdown hover + click ──
+  function initDropdown(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let timer;
+    el.addEventListener('mouseenter', () => { clearTimeout(timer); el.classList.add('open'); });
+    el.addEventListener('mouseleave', () => { timer = setTimeout(() => el.classList.remove('open'), 200); });
+    el.querySelector('a').addEventListener('click', (e) => {
+      e.preventDefault();
+      el.classList.toggle('open');
+    });
   }
-  const locDrop = document.getElementById('locDrop');
-  if (locDrop) {
-    let locTimer;
-    locDrop.addEventListener('mouseenter', () => { clearTimeout(locTimer); locDrop.classList.add('open'); });
-    locDrop.addEventListener('mouseleave', () => { locTimer = setTimeout(() => locDrop.classList.remove('open'), 200); });
-  }
+  initDropdown('pkgDrop');
+  initDropdown('locDrop');
 
   // ── Hamburger ──
   const hamburger = document.getElementById('hamburger');
