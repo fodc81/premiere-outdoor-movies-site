@@ -314,8 +314,27 @@
         <a href="./drive-in-package.html"><span class="dd-icon">🚗</span> Drive-In Package <span class="dd-price">custom</span></a>
       </div>
     </li>
-    <li><a href="./new-jersey.html">Locations</a></li>
-    <li><a href="./get-a-quote.html">Get a Quote</a></li>
+    <li class="nav-dropdown" id="locDrop">
+      <a href="#">Locations</a>
+      <div class="dropdown-menu">
+        <a href="./new-jersey.html"><span class="dd-icon">🎡</span> New Jersey</a>
+        <a href="./philadelphia.html"><span class="dd-icon">🔔</span> Philadelphia Area</a>
+        <a href="./eastern-pa.html"><span class="dd-icon">🌾</span> Eastern Pennsylvania</a>
+        <a href="./delaware.html"><span class="dd-icon">💎</span> Delaware</a>
+        <a href="./maryland.html"><span class="dd-icon">🦀</span> Maryland</a>
+        <a href="./virginia.html"><span class="dd-icon">🌸</span> Virginia</a>
+        <a href="./new-york.html"><span class="dd-icon">🗽</span> New York</a>
+        <a href="./connecticut.html"><span class="dd-icon">🌿</span> Connecticut</a>
+        <a href="./massachusetts.html"><span class="dd-icon">🦞</span> Massachusetts</a>
+        <a href="./florida.html"><span class="dd-icon">🌴</span> Florida</a>
+        <hr class="dd-divider" />
+        <p class="dd-label">Coming Soon — Operator Wanted</p>
+        <a href="./north-carolina.html"><span class="dd-icon">🌲</span> North Carolina</a>
+        <a href="./south-carolina.html"><span class="dd-icon">🌴</span> South Carolina</a>
+        <a href="./georgia.html"><span class="dd-icon">🍑</span> Georgia</a>
+        <a href="./ohio.html"><span class="dd-icon">🌻</span> Ohio</a>
+      </div>
+    </li>
   </ul>
   <a href="tel:8777674338" class="nav-cta">📞 877-767-4338</a>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -480,6 +499,12 @@
     let closeTimer;
     drop.addEventListener('mouseenter', () => { clearTimeout(closeTimer); drop.classList.add('open'); });
     drop.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => drop.classList.remove('open'), 200); });
+  }
+  const locDrop = document.getElementById('locDrop');
+  if (locDrop) {
+    let locTimer;
+    locDrop.addEventListener('mouseenter', () => { clearTimeout(locTimer); locDrop.classList.add('open'); });
+    locDrop.addEventListener('mouseleave', () => { locTimer = setTimeout(() => locDrop.classList.remove('open'), 200); });
   }
 
   // ── Hamburger ──
