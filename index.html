@@ -821,6 +821,19 @@
       .hero-form-field input {
         font-size: 16px !important;
       }
+      /* Ensure hamburger is always visible on mobile */
+      .nav-hamburger {
+        display: flex !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+      }
+      .nav-hamburger span {
+        display: block !important;
+        width: 24px !important;
+        height: 2px !important;
+        background: white !important;
+        border-radius: 2px !important;
+      }
       .hero-trust { gap: 16px; }
       .hero-trust-item { font-size: 12px; }
       .hero-trust-divider { display: none; }
@@ -1089,7 +1102,7 @@
       </div>
       <div class="hero-form-field">
         <label>When?</label>
-        <input type="text" id="heroDate" placeholder="Date or range" />
+        <input type="text" id="heroDate" placeholder="Date or range" inputmode="none" autocomplete="off" />
       </div>
       <button class="hero-form-btn" id="heroQuoteBtn">
         Get a Quote
