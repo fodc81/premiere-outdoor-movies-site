@@ -550,9 +550,10 @@
       const resp = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
+        body: new URLSearchParams(data).toString(),
+        redirect: 'manual'
       });
-      if (resp.ok) {
+      if (resp.ok || resp.type === 'opaqueredirect' || resp.status === 0) {
         form.reset();
         successMsg.style.display = 'block';
         errorMsg.style.display = 'none';
