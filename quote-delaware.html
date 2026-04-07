@@ -546,37 +546,38 @@
     data.append('_cc', cc);
 
     // Submit to Formspree
-    try {{
-      const resp = await fetch('https://formspree.io/f/mbdpqgel', {{
+    try {
+      const resp = await fetch('https://formspree.io/f/mbdpqgel', {
         method: 'POST',
         body: data,
-        headers: {{ 'Accept': 'application/json' }}
-      }});
-      if (resp.ok) {{
+        headers: { 'Accept': 'application/json' }
+      });
+      if (resp.ok) {
         form.reset();
         successMsg.style.display = 'block';
         errorMsg.style.display = 'none';
         submitBtn.textContent = 'Sent!';
-      }} else {{
-        const json = await resp.json().catch(() => ({{}}));
+        setTimeout(() => { window.location.href = './thank-you.html'; }, 1200);
+      } else {
+        const json = await resp.json().catch(() => ({}));
         throw new Error(json.error || 'Formspree error');
-      }}
-    }} catch(err) {{
+      }
+    } catch(err) {
       // Mailto fallback
       const lines = [];
-      for (const [key, val] of data.entries()) {{
-        if (!key.startsWith('_')) lines.push(`${{key.replace(/_/g,' ')}}: ${{val}}`);
-      }}
+      for (const [key, val] of data.entries()) {
+        if (!key.startsWith('_')) lines.push(`${key.replace(/_/g,' ')}: ${val}`);
+      }
       const body = lines.join('%0A');
       const subject = encodeURIComponent('QUOTE LEAD — Delaware');
       window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
-      setTimeout(() => {{
+      setTimeout(() => {
         successMsg.style.display = 'block';
         errorMsg.style.display = 'none';
         submitBtn.textContent = 'Sent!';
-      }}, 500);
-    }}
-  }});
+      }, 500);
+    }
+  });
 </script>
 </body>
 </html>
