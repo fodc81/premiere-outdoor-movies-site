@@ -355,7 +355,9 @@
 <!-- FORM -->
 <div class="form-section">
   <div class="form-card">
-    <form id="quoteForm" novalidate>
+    <form id="quoteForm" name="quote-delaware" method="POST" netlify netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="quote-delaware" />
+  <input type="hidden" name="bot-field" style="display:none" />
       <!-- hidden territory field -->
       <input type="hidden" name="territory" value="Delaware" />
       <input type="hidden" name="_subject" value="QUOTE LEAD Delaware" />
@@ -508,7 +510,7 @@
   const successMsg = document.getElementById('successMsg');
   const errorMsg = document.getElementById('errorMsg');
 
-  form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     // Basic validation
@@ -531,26 +533,19 @@
       return;
     }
 
-    // Build form data
     const data = new FormData(form);
     const submitBtn = form.querySelector('.submit-btn');
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Routing
     const to = 'eventsde@premiereoutdoormovies.com';
-    const cc = 'roger@premiereoutdoormovie.com';
-    data.append('_subject', 'QUOTE LEAD — Delaware');
-    data.append('_replyto', data.get('email') || '');
-    data.append('_next', window.location.origin + '/thank-you.html');
-    data.append('_cc', cc);
+    const cc = 'roger@premiereoutdoormovies.com';
 
-    // Submit to Formspree
     try {
-      const resp = await fetch('https://formspree.io/f/mbdpqgel', {
+      const resp = await fetch('/', {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
       });
       if (resp.ok) {
         form.reset();
@@ -559,14 +554,13 @@
         submitBtn.textContent = 'Sent!';
         setTimeout(() => { window.location.href = './thank-you.html'; }, 1200);
       } else {
-        const json = await resp.json().catch(() => ({}));
-        throw new Error(json.error || 'Formspree error');
+        throw new Error('Netlify error');
       }
     } catch(err) {
       // Mailto fallback
       const lines = [];
       for (const [key, val] of data.entries()) {
-        if (!key.startsWith('_')) lines.push(`${key.replace(/_/g,' ')}: ${val}`);
+        if (!key.startsWith('form-name') && !key.startsWith('bot-field')) lines.push(`${key.replace(/_/g,' ')}: ${val}`);
       }
       const body = lines.join('%0A');
       const subject = encodeURIComponent('QUOTE LEAD — Delaware');
@@ -577,7 +571,7 @@
         submitBtn.textContent = 'Sent!';
       }, 500);
     }
-  });
+  })
 </script>
 </body>
 </html>
