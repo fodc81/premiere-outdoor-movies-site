@@ -800,6 +800,8 @@
       nav { padding: 0 20px; }
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex !important; }
+      /* Hide the When field on mobile — causes page drift on iOS */
+      .hero-date-field { display: none !important; }
 
       /* Hero */
       .hero { padding-top: 88px; padding-bottom: 48px; min-height: auto; }
@@ -1082,7 +1084,7 @@
         <label>Zip Code <span style="font-size:10px;opacity:0.7;">(PA routing)</span></label>
         <input type="text" id="heroZip" placeholder="e.g. 19103" maxlength="5" />
       </div>
-      <div class="hero-form-field">
+      <div class="hero-form-field hero-date-field">
         <label>When?</label>
         <input type="text" id="heroDate" placeholder="Date or range" inputmode="none" autocomplete="off" />
       </div>
