@@ -461,12 +461,19 @@
   function tryGeolocate() {
     if (!navigator.geolocation) { showManual(); return; }
 
+    // Hard safety net — if nothing happens in 4s, show manual selector
+    let resolved = false;
+    const safetyTimer = setTimeout(() => {
+      if (!resolved) { resolved = true; showManual(); }
+    }, 4000);
+
     navigator.geolocation.getCurrentPosition(
       function(pos) {
-        // Use reverse geocoding via a free API to get state from lat/lon
+        if (resolved) return;
+        resolved = true;
+        clearTimeout(safetyTimer);
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
-        // Use bigdatacloud free reverse geocode (no key required)
         fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`)
           .then(r => r.json())
           .then(data => {
@@ -489,10 +496,12 @@
           .catch(() => showManual());
       },
       function() {
-        // User denied or timed out
+        if (resolved) return;
+        resolved = true;
+        clearTimeout(safetyTimer);
         showManual();
       },
-      { timeout: 6000 }
+      { timeout: 4000 }
     );
   }
 
