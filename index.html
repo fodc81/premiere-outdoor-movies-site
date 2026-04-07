@@ -816,6 +816,11 @@
       }
       .hero-form-field:last-of-type { border-bottom: none; }
       .hero-form-btn { padding: 16px; justify-content: center; font-size: 15px; }
+      /* Prevent iOS from zooming + scrolling on input focus (font-size must be >= 16px) */
+      .hero-form-field select,
+      .hero-form-field input {
+        font-size: 16px !important;
+      }
       .hero-trust { gap: 16px; }
       .hero-trust-item { font-size: 12px; }
       .hero-trust-divider { display: none; }
