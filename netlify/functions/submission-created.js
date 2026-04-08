@@ -164,6 +164,7 @@ exports.handler = async (event) => {
       phone:                data.phone || data.cellphone || '',
       event_date:           data.event_date || data.eventstartdate_text || '',
       address:              data.address || data.eventstreet || '',
+      city:                 data.city || data.eventcity || '',
       zip:                  data.zip || data.eventzip || '',
       notes:                buildNotes(data),
       locationid:           locationId,
