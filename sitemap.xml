@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core pages -->
-  <url><loc>https://www.premiereoutdoormovie.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/reviews.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/get-a-quote.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/careers.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/reviews.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/get-a-quote.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/careers.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Package pages -->
-  <url><loc>https://www.premiereoutdoormovie.com/backyard-party-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/indoor-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/premiere-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/blockbuster-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/ultimate-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/drive-in-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/backyard-party-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/indoor-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/premiere-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/blockbuster-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/ultimate-event-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/drive-in-package.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Location pages — active markets -->
-  <url><loc>https://www.premiereoutdoormovie.com/new-jersey.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/philadelphia.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/eastern-pa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/delaware.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/maryland.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/virginia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/new-york.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/connecticut.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/massachusetts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/florida.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/new-jersey.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/philadelphia.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/eastern-pa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/delaware.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/maryland.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/virginia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/new-york.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/connecticut.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/massachusetts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/florida.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Coming soon location pages -->
-  <url><loc>https://www.premiereoutdoormovie.com/north-carolina.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/south-carolina.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/georgia.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/ohio.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/north-carolina.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/south-carolina.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/georgia.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/ohio.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 
   <!-- Quote pages -->
-  <url><loc>https://www.premiereoutdoormovie.com/quote-new-jersey.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-philadelphia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-eastern-pa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-delaware.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-maryland.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-virginia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-new-york.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-connecticut.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-massachusetts.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-florida.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.premiereoutdoormovie.com/quote-corporate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-new-jersey.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-philadelphia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-eastern-pa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-delaware.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-maryland.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-virginia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-new-york.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-connecticut.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-massachusetts.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-florida.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://premiereoutdoormovie.com/quote-corporate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
