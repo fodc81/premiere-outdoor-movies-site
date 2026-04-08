@@ -137,6 +137,7 @@ exports.handler = async (event) => {
       return { statusCode: 200, body: 'Bot submission ignored' };
     }
 
+    const customerName = data.full_name || data.name || '';
     const locationId = resolveLocationId(
       formName,
       data.zip || data.eventzip || '',
@@ -144,7 +145,8 @@ exports.handler = async (event) => {
     );
 
     const leadPayload = {
-      name:                 data.full_name || data.name || '',
+      name:                 customerName,
+      eventname:            customerName,
       email:                data.email || '',
       cellphone:            data.phone || data.cellphone || '',
       eventstartdate_text:  data.event_date || data.eventstartdate_text || '',
