@@ -19,7 +19,7 @@ const TERRITORY_TO_LOCATION = {
   'quote-virginia':      'POM-VA',
   'quote-florida':       'Orlando',
   'quote-connecticut':   'POM-Connecticut',
-  'quote-massachusetts': 'POM-Massachusetts',
+  'quote-massachusetts': 'POM New York',
 };
 
 // ── State code → IO Location ID (for corporate zip lookup) ──
@@ -32,7 +32,7 @@ const STATE_TO_LOCATION = {
   'VA': 'POM-VA',
   'FL': 'Orlando',
   'CT': 'POM-Connecticut',
-  'MA': 'POM-Massachusetts',
+  'MA': 'POM New York',
 };
 
 // ── Philadelphia territory zip codes ──
