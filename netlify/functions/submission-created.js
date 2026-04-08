@@ -97,13 +97,25 @@ function buildNotes(data) {
   return parts.join(' | ');
 }
 
+// ── Territory → Zapier webhook URL map ──
+const LOCATION_TO_WEBHOOK = {
+  'POM New York':      '/hooks/catch/26693121/u79pdry/',
+  'South Jersey/PA':   '/hooks/catch/26693121/u7mqaax/',
+  'Central PA':        '/hooks/catch/26693121/u75os22/',
+  'MDDE':              '/hooks/catch/26693121/u75btbv/',
+  'POM-VA':            '/hooks/catch/26693121/u75bc8g/',
+  'Orlando':           '/hooks/catch/26693121/u753drc/',
+  'POM-Connecticut':   '/hooks/catch/26693121/u753fy9/',
+};
+
 // ── Post to Zapier webhook → Inflatable Office ──
 function postToIO(payload) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify(payload);
+    const webhookPath = LOCATION_TO_WEBHOOK[payload.locationid] || '/hooks/catch/26693121/u7mqaax/';
     const options = {
       hostname: 'hooks.zapier.com',
-      path: '/hooks/catch/26693121/u7mqaax/',
+      path: webhookPath,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
