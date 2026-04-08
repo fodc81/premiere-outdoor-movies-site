@@ -101,7 +101,7 @@ function buildNotes(data) {
 const LOCATION_TO_WEBHOOK = {
   'POM New York':      '/hooks/catch/26693121/u79pdry/',
   'South Jersey/PA':   '/hooks/catch/26693121/u7mqaax/',
-  'Central PA':        '/hooks/catch/26693121/u75os22/',
+  'Central PA':        '/hooks/catch/26693121/u75ilgf/',
   'MDDE':              '/hooks/catch/26693121/u75btbv/',
   'POM-VA':            '/hooks/catch/26693121/u75bc8g/',
   'Orlando':           '/hooks/catch/26693121/u753drc/',
