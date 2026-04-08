@@ -97,17 +97,16 @@ function buildNotes(data) {
   return parts.join(' | ');
 }
 
-// ── Post to IO API ──
+// ── Post to Zapier webhook → Inflatable Office ──
 function postToIO(payload) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify(payload);
     const options = {
-      hostname: 'app.inflatableoffice.com',
-      path: '/api/v1/leads',
+      hostname: 'hooks.zapier.com',
+      path: '/hooks/catch/26693121/u7mqaax/',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.IO_API_KEY}`,
         'Content-Length': Buffer.byteLength(body),
       },
     };
@@ -160,7 +159,7 @@ exports.handler = async (event) => {
     };
 
     const result = await postToIO(leadPayload);
-    console.log(`IO lead created — form: ${formName}, location: ${locationId}, status: ${result.status}`);
+    console.log(`IO lead sent via Zapier — form: ${formName}, location: ${locationId}, status: ${result.status}`);
 
     return { statusCode: 200, body: JSON.stringify({ success: true, ioStatus: result.status }) };
 
