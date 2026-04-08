@@ -99,7 +99,7 @@ function buildNotes(data) {
 
 // ── Territory → Zapier webhook URL map ──
 const LOCATION_TO_WEBHOOK = {
-  'POM New York':      '/hooks/catch/26693121/u79pdry/',
+  'POM New York':      '/hooks/catch/26693121/u7ru5bo/',
   'South Jersey/PA':   '/hooks/catch/26693121/u7mqaax/',
   'Central PA':        '/hooks/catch/26693121/u75ilgf/',
   'MDDE':              '/hooks/catch/26693121/u75btbv/',
