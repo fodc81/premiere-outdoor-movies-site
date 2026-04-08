@@ -128,7 +128,9 @@ function postToIO(payload) {
 exports.handler = async (event) => {
   try {
     // Netlify passes form data as JSON in the event body
-    const payload = JSON.parse(event.body);
+    const body = JSON.parse(event.body);
+    // Netlify submission-created events wrap data inside a 'payload' key
+    const payload = body.payload || body;
     const data = payload.data || {};
     const formName = payload.form_name || '';
 
