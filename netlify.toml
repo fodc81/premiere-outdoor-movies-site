@@ -47,6 +47,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/locations/georgia/*"
+  to = "/georgia"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
