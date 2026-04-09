@@ -2,6 +2,51 @@
   publish = "."
   functions = "netlify/functions"
 
+# 301 redirects — fix legacy/indexed URLs pointing to pages that no longer exist
+# Google is indexing /backyard-movie-package and /packages/[name]/ URLs that 404.
+# These redirects consolidate link equity onto the live package pages.
+[[redirects]]
+  from = "/backyard-movie-package"
+  to = "/backyard-party-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/backyard-party/*"
+  to = "/backyard-party-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/premiere-event/*"
+  to = "/premiere-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/blockbuster-event/*"
+  to = "/blockbuster-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/ultimate-event/*"
+  to = "/ultimate-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/drive-in-movie/*"
+  to = "/drive-in-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages/indoor-event/*"
+  to = "/indoor-event-package"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
