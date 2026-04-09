@@ -53,6 +53,115 @@
   status = 301
   force = true
 
+# Blog redirects — two patterns:
+# 1. /blog/slug or /blog/slug/ (WordPress-style paths Google may have indexed)
+# 2. Long-form slugs that were in old canonicals but don't match the actual filename
+
+# Pattern 1: catch-all for /blog/* → strip the /blog/ prefix
+# Netlify splat redirect: :splat captures everything after /blog/
+[[redirects]]
+  from = "/blog/:splat"
+  to = "/:splat"
+  status = 301
+  force = true
+
+# Pattern 2: long-slug mismatches (specific 1:1 redirects)
+[[redirects]]
+  from = "/4k-vs-hd-outdoor-projectors-the-ultimate-image-quality-guide"
+  to = "/4k-vs-hd-outdoor-projectors-image-quality-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-trending-movie-themes-for-your-winter-outdoor-cinema-and-how-to-execute-them"
+  to = "/5-trending-movie-themes-winter-outdoor-cinema"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beyond-the-living-room-how-outdoor-movie-experiences-are-changing-home-entertainment"
+  to = "/beyond-living-room-outdoor-movie-home-entertainment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-birth-of-drive-in-theaters-a-history-of-outdoor-cinema-innovation"
+  to = "/birth-drive-in-theaters"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corporate-retreats-reimagined-outdoor-movies-for-team-building"
+  to = "/corporate-retreats-outdoor-movies-team-building"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/from-silent-films-under-the-stars-to-blockbusters-on-the-big-screen-tracing-the-evolution-of-outdoor-cinema"
+  to = "/from-silent-films-under-the-stars-to-blockbusters-on-the-big"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/harvest-moon-movie-magic-pairing-outdoor-screening-with-lunar-events"
+  to = "/harvest-moon-movie-magic-lunar-events"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate-guide"
+  to = "/how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/interactive-outdoor-movie-technology-audience-engagement-in-2025"
+  to = "/interactive-outdoor-movie-technology-audience-engagement"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lights-camera-green-action-making-your-outdoor-movie-night-eco-friendly"
+  to = "/lights-camera-green-action-making-your-outdoor-movie-night-eco"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor-movie-night"
+  to = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/outdoor-movies-blending-art-nature-and-technology-for-unforgettable-experiences"
+  to = "/outdoor-movies-blending-art-nature-and-technology-for"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pet-friendly-movie-nights-including-furry-friends-in-your-cinema-experience"
+  to = "/pet-friendly-movie-nights-cinema-experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/seasonal-sensations-adapting-your-outdoor-cinema-theme-to-match-the-time-of-year"
+  to = "/seasonal-sensations-adapting-outdoor-cinema-theme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the-open-air"
+  to = "/the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-six-golden-rules-of-choosing-the-perfect-outdoor-movie-location"
+  to = "/the-six-golden-rules-of-choosing-the-perfect-outdoor-movie"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
