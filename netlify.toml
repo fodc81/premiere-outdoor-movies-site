@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking — stops your site being embedded in iframes on other sites
+    X-Frame-Options = "SAMEORIGIN"
+
+    # Stop browsers from guessing/sniffing file types (MIME confusion attacks)
+    X-Content-Type-Options = "nosniff"
+
+    # Control what referrer info is shared when visitors click links off your site
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Restrict browser features — site doesn't need camera, mic, or geolocation access
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # Content Security Policy — allow only the specific external sources the site actually uses
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://elfsightcdn.com https://static.elfsight.com https://apps.elfsight.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; media-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.elfsight.com https://service.elfsight.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.netlify.com;"
+
+    # HTTPS enforced for 1 year — already present but setting explicitly here too
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
