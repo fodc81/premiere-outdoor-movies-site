@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.premiereoutdoormovie.com/sitemap.xml
+Sitemap: https://premiereoutdoormovie.com/sitemap.xml
