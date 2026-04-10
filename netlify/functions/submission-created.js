@@ -154,7 +154,7 @@ exports.handler = async (event) => {
     const locationId = resolveLocationId(
       formName,
       data.zip || data.eventzip || '',
-      data.state || data.eventstate || ''
+      data.state || data.eventstate || data.event_state || ''
     );
 
     const leadPayload = {
