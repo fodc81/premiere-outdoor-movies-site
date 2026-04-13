@@ -122,21 +122,6 @@
 
 # --- Utility page aliases ---
 [[redirects]]
-  from = "/about"
-  to = "/about"
-  status = 200
-
-[[redirects]]
-  from = "/reviews"
-  to = "/reviews"
-  status = 200
-
-[[redirects]]
-  from = "/blog"
-  to = "/blog"
-  status = 200
-
-[[redirects]]
   from = "/contact-us"
   to = "/get-a-quote"
   status = 301
@@ -209,11 +194,6 @@
   to = "/reviews"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/florida"
-  to = "/florida"
-  status = 200
 
 # --- Blog posts indexed at root level (no blog- prefix) ---
 # These were published on the old Wix site at root URLs; now they live at /blog-[slug]
