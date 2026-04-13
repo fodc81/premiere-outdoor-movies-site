@@ -53,6 +53,446 @@
   status = 301
   force = true
 
+# --- Package aliases (old Wix page names → current package slugs) ---
+[[redirects]]
+  from = "/ultimate-movie-package"
+  to = "/ultimate-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/indoor-movie-package"
+  to = "/indoor-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/indoor-movie-package9ce9f42c"
+  to = "/indoor-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blockbuster-movie-package"
+  to = "/blockbuster-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blockbuster-movie-packagece01e7a0"
+  to = "/blockbuster-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-movie-package97fe0694"
+  to = "/premiere-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/drive-inba8cb840"
+  to = "/drive-in-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/drive-ins"
+  to = "/drive-in-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/orlando-ultimate-movie-package"
+  to = "/ultimate-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/orlando-drive-ins"
+  to = "/drive-in-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/backyard-movie-package-texas"
+  to = "/backyard-party-package"
+  status = 301
+  force = true
+
+# --- Utility page aliases ---
+[[redirects]]
+  from = "/about"
+  to = "/about"
+  status = 200
+
+[[redirects]]
+  from = "/reviews"
+  to = "/reviews"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog"
+  status = 200
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/free-quote"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/free-quote-new-york"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/free-quote-new-jersey"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/free-quote-florida"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/free-quote-texas"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/packages"
+  to = "/"
+  status = 301
+  force = true
+
+# --- Old Wix store pages → homepage ---
+[[redirects]]
+  from = "/store/*"
+  to = "/"
+  status = 301
+  force = true
+
+# --- Garbage Wix hash/temp pages → homepage ---
+[[redirects]]
+  from = "/promo"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/newpage"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/my-post40f6d34e"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reviews43e4f0d5"
+  to = "/reviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/florida"
+  to = "/florida"
+  status = 200
+
+# --- Blog posts indexed at root level (no blog- prefix) ---
+# These were published on the old Wix site at root URLs; now they live at /blog-[slug]
+[[redirects]]
+  from = "/the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
+  to = "/blog-the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/4-ways-to-stream-movies-outdoors"
+  to = "/blog-4-ways-to-stream-movies-outdoors"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tips-for-planning-a-super-bowl-bash-to-remember"
+  to = "/blog-tips-for-planning-a-super-bowl-bash-to-remember"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-indoor-movie-night-activities-for-families"
+  to = "/blog-5-indoor-movie-night-activities-for-families"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
+  to = "/blog-under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor-movie-night"
+  to = "/blog-outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/planning-the-perfect-teen-party"
+  to = "/blog-planning-the-perfect-teen-party"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/holiday-social-distancing-outdoor-movie-ideas"
+  to = "/blog-holiday-social-distancing-outdoor-movie-ideas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/great-holiday-movie-options"
+  to = "/blog-great-holiday-movie-options"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/making-outdoor-movies-magical-for-all"
+  to = "/blog-making-outdoor-movies-magical-for-all"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/celebrate-safely-for-your-project-graduation-with-outdoor-movies"
+  to = "/blog-celebrate-safely-for-your-project-graduation-with-outdoor-movies"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-outdoor-movies-around-the-world"
+  to = "/blog-premiere-outdoor-movies-around-the-world"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/planning-a-spring-break-staycation-movie-night-to-remember"
+  to = "/blog-planning-a-spring-break-staycation-movie-night-to-remember"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/party-tips-for-your-graduate"
+  to = "/blog-party-tips-for-your-graduate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
+  to = "/blog-what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-make-the-perfect-recurring-movie-event"
+  to = "/blog-how-to-make-the-perfect-recurring-movie-event"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/top-movies-for-toddlers"
+  to = "/blog-top-movies-for-toddlers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/15-best-healthy-snacks-to-eat-during-a-family-movie-night"
+  to = "/blog-15-best-healthy-snacks-to-eat-during-a-family-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/adapting-to-daylight-saving-earlier-start-times-for-spring-screenings"
+  to = "/blog-adapting-to-daylight-saving-spring-screenings"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-role-of-outdoor-movies-in-promoting-environmental-awareness"
+  to = "/blog-the-role-of-outdoor-movies-in-promoting-environmental-awareness"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/creating-an-amazing-autumn-outdoor-movie-night"
+  to = "/blog-creating-an-amazing-autumn-outdoor-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/outdoor-movie-planning-for-christmas"
+  to = "/blog-outdoor-movie-planning-for-christmas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/seasonal-outdoor-cinema-atmosphere-ideas"
+  to = "/blog-seasonal-outdoor-cinema-atmosphere-ideas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-great-movie-options-for-family-movie-night"
+  to = "/blog-5-great-movie-options-for-family-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
+  to = "/blog-night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/10-must-have-essentials-for-your-next-outdoor-movie-experience"
+  to = "/blog-10-must-have-essentials-for-your-next-outdoor-movie-experience"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
+  to = "/blog-5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/a-movie-night-out-in-the-time-of-social-distancing"
+  to = "/blog-a-movie-night-out-in-the-time-of-social-distancing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-to-create-a-romantic-outdoor-movie-atmosphere"
+  to = "/blog-how-to-create-a-romantic-outdoor-movie-atmosphere"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-family-friendly-outdoor-movies-to-watch-this-summer"
+  to = "/blog-5-family-friendly-outdoor-movies-to-watch-this-summer"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/plan-your-next-summer-bbq-and-movie-night"
+  to = "/blog-plan-your-next-summer-bbq-and-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bring-your-community-together-under-the-stars"
+  to = "/blog-bring-your-community-together-under-the-stars"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/10-tips-on-how-to-throw-an-outdoor-movie-party"
+  to = "/blog-10-tips-on-how-to-throw-an-outdoor-movie-party"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-outdoor-movie-packages-compared"
+  to = "/blog-premiere-outdoor-movie-packages-compared"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
+  to = "/blog-5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/why-outdoor-movies-are-the-ultimate-summer-activity"
+  to = "/blog-why-outdoor-movies-are-the-ultimate-summer-activity"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/post-prom-party-movie-package-ideas"
+  to = "/blog-post-prom-party-movie-package-ideas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/everything-you-require-to-throw-the-ultimate-backyard-movie-night"
+  to = "/blog-everything-you-require-to-throw-the-ultimate-backyard-movie-night"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-outdoor-cinema-offers-an-escape-from-modern-digital-life"
+  to = "/blog-how-outdoor-cinema-offers-an-escape-from-modern-digital-life"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/great-tips-for-your-next-football-viewing-party"
+  to = "/blog-great-tips-for-your-next-football-viewing-party"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/open-air-cinemas-in-the-1920s"
+  to = "/blog-open-air-cinemas-in-the-1920s"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/creative-ideas-to-throw-an-amazing-backyard-halloween-party"
+  to = "/blog-creative-ideas-to-throw-an-amazing-backyard-halloween-party"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hosting-the-best-holiday-movie-party-this-season"
+  to = "/blog-hosting-the-best-holiday-movie-party-this-season"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-outdoor-movies-favorite-rentals"
+  to = "/blog-premiere-outdoor-movies-favorite-rentals"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/top-2019-summer-movies"
+  to = "/blog-top-2019-summer-movies"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/looking-for-great-family-reunion-ideas-we-have-you-covered"
+  to = "/blog-looking-for-great-family-reunion-ideas-we-have-you-covered"
+  status = 301
+  force = true
+
 # Blog redirects — two patterns:
 # 1. /blog/slug or /blog/slug/ (WordPress-style paths Google may have indexed)
 # 2. Long-form slugs that were in old canonicals but don't match the actual filename
