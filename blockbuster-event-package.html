@@ -814,6 +814,53 @@
   initDropdown('navDropdown');
   initDropdown('locDrop');
 
+  const screenData = {
+    '20': {
+      heroPrice:      '$899',
+      heroGuests:     '· Up to 500 guests',
+      barScreen:      '20-Foot Inflatable',
+      barGuests:      'Up to 500 Guests',
+      sidebarPrice:   '$899',
+      sidebarScreen:  '20-Foot AirScreen® Inflatable',
+      sidebarGuests:  'starting price\nup to 500 guests',
+      contentTitle:   '20-Foot AirScreen® Inflatable Screen',
+      contentDesc:    "The AirScreen® 20 delivers a commanding 20' x 11'3\" projection surface, 220 sq ft of screen that's visible from 400+ feet away. Built for parks, athletic fields, festival grounds, and large venue lawns. This is the screen that makes an entrance.",
+      rendersTitle:   'The AirScreen® 20',
+      rendersDesc:    '220 square feet of projection surface. At 20 feet wide and nearly 19 feet tall, this screen is impossible to miss and impossible to forget.',
+      specModel:      'AirScreen® 20',
+      specWidth:      '20 feet (6.1m)',
+      specHeight:     "11'3\" (3.4m)",
+      specArea:       '220 sq ft (20.4m²)',
+      specOverallH:   "18'5\" (5.6m)",
+      specOverallW:   '23 feet (7.0m)',
+      specGround:     "5'11\" (1.8m)",
+      specCapacity:   'Up to 500 guests',
+      renderTab:      'r20',
+    },
+    '24': {
+      heroPrice:      '$1,099',
+      heroGuests:     '· Up to 600 guests',
+      barScreen:      '24-Foot Inflatable',
+      barGuests:      'Up to 600 Guests',
+      sidebarPrice:   '$1,099',
+      sidebarScreen:  '24-Foot AirScreen® Inflatable',
+      sidebarGuests:  'starting price\nup to 600 guests',
+      contentTitle:   '24-Foot AirScreen® Inflatable Screen',
+      contentDesc:    "The AirScreen® 24 steps it up with a 24' x 13'6\" projection surface — 324 sq ft of screen visible from 500+ feet away. When the 20-foot isn't quite big enough, this is the upgrade that fills the space.",
+      rendersTitle:   'The AirScreen® 24',
+      rendersDesc:    '324 square feet of projection surface. At 24 feet wide and 22 feet tall overall, the AirScreen® 24 commands attention at any large outdoor venue.',
+      specModel:      'AirScreen® 24',
+      specWidth:      '24 feet (7.3m)',
+      specHeight:     "13'6\" (4.1m)",
+      specArea:       '324 sq ft (30.1m²)',
+      specOverallH:   '22 feet (6.7m)',
+      specOverallW:   "27'11\" (8.5m)",
+      specGround:     "6'6\" (2.0m)",
+      specCapacity:   'Up to 600 guests',
+      renderTab:      'r24',
+    },
+  };
+
   function setScreen(size) {
     const d = screenData[size];
     const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
