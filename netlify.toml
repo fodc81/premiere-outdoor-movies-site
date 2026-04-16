@@ -978,6 +978,25 @@
   to = "/blog-5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
   status = 301
 
+# ─── DUPLICATE CONTENT — redirect shorter/older posts to canonical version ──
+# 4K vs HD: two posts on same topic, redirect shorter to longer
+[[redirects]]
+  from = "/blog-4k-vs-hd-outdoor-projectors"
+  to = "/blog-4k-vs-hd-outdoor-projectors-image-quality-guide"
+  status = 301
+
+# Pet-friendly movies: two posts on same topic
+[[redirects]]
+  from = "/blog-pet-friendly-movie-nights"
+  to = "/blog-pet-friendly-movie-nights-cinema-experience"
+  status = 301
+
+# Interactive technology: two posts on same topic
+[[redirects]]
+  from = "/blog-interactive-outdoor-movie-technology"
+  to = "/blog-interactive-outdoor-movie-technology-audience-engagement"
+  status = 301
+
 # ─── /blog/* CATCH-ALL — send to blog index (no redirect chains) ─
 [[redirects]]
   from = "/blog/*"
