@@ -7,6 +7,32 @@
 # Last updated: April 2026 — full audit after site redesign
 # ═══════════════════════════════════════════════════════════════
 
+# ─── WWW → NON-WWW (fixes 59 "alternate canonical" GSC issues) ──
+# Must come first and use force=true to override file serving
+[[redirects]]
+  from = "https://www.premiereoutdoormovie.com/*"
+  to = "https://premiereoutdoormovie.com/:splat"
+  status = 301
+  force = true
+
+# ─── .html EXTENSION REMOVAL (eliminates .html duplicate URLs) ──
+# Redirects /page.html → /page for all pages
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+
+# ─── TRAILING SLASH CLEANUP ─────────────────────────────────────
+[[redirects]]
+  from = "/about/"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/careers/"
+  to = "/careers"
+  status = 301
+
 # ─── PACKAGE PAGES ─────────────────────────────────────────────
 [[redirects]]
   from = "/backyard-movie-package"
@@ -391,6 +417,46 @@
 [[redirects]]
   from = "/central-pa"
   to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/allentown"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/easton"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/scranton"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/quakertown"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/lansdale"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/reading"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/pennsylvania"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/bloomington"
+  to = "/"
   status = 301
 
 [[redirects]]
