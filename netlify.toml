@@ -17,10 +17,12 @@
 
 # ─── .html EXTENSION REMOVAL (eliminates .html duplicate URLs) ──
 # Redirects /page.html → /page for all pages
+# force=true is required because Netlify pretty-URLs serves .html files directly
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
   status = 301
+  force = true
 
 # ─── TRAILING SLASH CLEANUP ─────────────────────────────────────
 [[redirects]]
