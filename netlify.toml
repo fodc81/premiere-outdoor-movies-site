@@ -2,603 +2,997 @@
   publish = "."
   functions = "netlify/functions"
 
-# 301 redirects — fix legacy/indexed URLs pointing to pages that no longer exist
-# Google is indexing /backyard-movie-package and /packages/[name]/ URLs that 404.
-# These redirects consolidate link equity onto the live package pages.
+# ═══════════════════════════════════════════════════════════════
+# 301 REDIRECTS — Recover SEO equity from old site URLs
+# Last updated: April 2026 — full audit after site redesign
+# ═══════════════════════════════════════════════════════════════
+
+# ─── PACKAGE PAGES ─────────────────────────────────────────────
 [[redirects]]
   from = "/backyard-movie-package"
   to = "/backyard-party-package"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/packages/backyard-party/*"
   to = "/backyard-party-package"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/packages/premiere-event/*"
   to = "/premiere-event-package"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/packages/blockbuster-event/*"
   to = "/blockbuster-event-package"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/packages/ultimate-event/*"
   to = "/ultimate-event-package"
   status = 301
-  force = true
+
+[[redirects]]
+  from = "/packages/drive-in-movie/"
+  to = "/drive-in-package"
+  status = 301
 
 [[redirects]]
   from = "/packages/drive-in-movie/*"
   to = "/drive-in-package"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/packages/indoor-event/*"
   to = "/indoor-event-package"
   status = 301
-  force = true
-
-[[redirects]]
-  from = "/locations/georgia/*"
-  to = "/georgia"
-  status = 301
-  force = true
-
-# --- Package aliases (old Wix page names → current package slugs) ---
-[[redirects]]
-  from = "/ultimate-movie-package"
-  to = "/ultimate-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/indoor-movie-package"
-  to = "/indoor-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/indoor-movie-package9ce9f42c"
-  to = "/indoor-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blockbuster-movie-package"
-  to = "/blockbuster-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blockbuster-movie-packagece01e7a0"
-  to = "/blockbuster-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/premiere-movie-package97fe0694"
-  to = "/premiere-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/drive-inba8cb840"
-  to = "/drive-in-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/drive-ins"
-  to = "/drive-in-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/orlando-ultimate-movie-package"
-  to = "/ultimate-event-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/orlando-drive-ins"
-  to = "/drive-in-package"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/backyard-movie-package-texas"
-  to = "/backyard-party-package"
-  status = 301
-  force = true
-
-# --- Utility page aliases ---
-[[redirects]]
-  from = "/contact-us"
-  to = "/get-a-quote"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/free-quote"
-  to = "/get-a-quote"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/free-quote-new-york"
-  to = "/get-a-quote"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/free-quote-new-jersey"
-  to = "/get-a-quote"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/free-quote-florida"
-  to = "/get-a-quote"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/free-quote-texas"
-  to = "/get-a-quote"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "/packages"
   to = "/"
   status = 301
-  force = true
-
-# --- Old Wix store pages → homepage ---
-[[redirects]]
-  from = "/store/*"
-  to = "/"
-  status = 301
-  force = true
-
-# --- Garbage Wix hash/temp pages → homepage ---
-[[redirects]]
-  from = "/promo"
-  to = "/"
-  status = 301
-  force = true
 
 [[redirects]]
-  from = "/newpage"
-  to = "/"
+  from = "/premiere-movie-package"
+  to = "/premiere-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/my-post40f6d34e"
-  to = "/"
+  from = "/premiere-movie-package97fe0694"
+  to = "/premiere-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/reviews43e4f0d5"
-  to = "/reviews"
+  from = "/ultimate-movie-package"
+  to = "/ultimate-event-package"
   status = 301
-  force = true
-
-# --- Blog posts indexed at root level (no blog- prefix) ---
-# These were published on the old Wix site at root URLs; now they live at /blog-[slug]
-[[redirects]]
-  from = "/the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
-  to = "/blog-the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
-  status = 301
-  force = true
 
 [[redirects]]
-  from = "/4-ways-to-stream-movies-outdoors"
-  to = "/blog-4-ways-to-stream-movies-outdoors"
+  from = "/indoor-movie-package"
+  to = "/indoor-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/tips-for-planning-a-super-bowl-bash-to-remember"
-  to = "/blog-tips-for-planning-a-super-bowl-bash-to-remember"
+  from = "/indoor-movie-package9ce9f42c"
+  to = "/indoor-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/5-indoor-movie-night-activities-for-families"
-  to = "/blog-5-indoor-movie-night-activities-for-families"
+  from = "/blockbuster-movie-package"
+  to = "/blockbuster-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
-  to = "/blog-under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
+  from = "/blockbuster-movie-packagece01e7a0"
+  to = "/blockbuster-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor-movie-night"
-  to = "/blog-outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor"
+  from = "/drive-in"
+  to = "/drive-in-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/planning-the-perfect-teen-party"
-  to = "/blog-planning-the-perfect-teen-party"
+  from = "/drive-ins"
+  to = "/drive-in-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/holiday-social-distancing-outdoor-movie-ideas"
-  to = "/blog-holiday-social-distancing-outdoor-movie-ideas"
+  from = "/drive-inba8cb840"
+  to = "/drive-in-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/great-holiday-movie-options"
-  to = "/blog-great-holiday-movie-options"
+  from = "/orlando-ultimate-movie-package"
+  to = "/ultimate-event-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/making-outdoor-movies-magical-for-all"
-  to = "/blog-making-outdoor-movies-magical-for-all"
+  from = "/orlando-drive-ins"
+  to = "/drive-in-package"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/celebrate-safely-for-your-project-graduation-with-outdoor-movies"
-  to = "/blog-celebrate-safely-for-your-project-graduation-with-outdoor-movies"
+  from = "/backyard-movie-package-texas"
+  to = "/backyard-party-package"
   status = 301
-  force = true
-
-[[redirects]]
-  from = "/premiere-outdoor-movies-around-the-world"
-  to = "/blog-premiere-outdoor-movies-around-the-world"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/planning-a-spring-break-staycation-movie-night-to-remember"
-  to = "/blog-planning-a-spring-break-staycation-movie-night-to-remember"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/party-tips-for-your-graduate"
-  to = "/blog-party-tips-for-your-graduate"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
-  to = "/blog-what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/how-to-make-the-perfect-recurring-movie-event"
-  to = "/blog-how-to-make-the-perfect-recurring-movie-event"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/top-movies-for-toddlers"
-  to = "/blog-top-movies-for-toddlers"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/15-best-healthy-snacks-to-eat-during-a-family-movie-night"
-  to = "/blog-15-best-healthy-snacks-to-eat-during-a-family-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/adapting-to-daylight-saving-earlier-start-times-for-spring-screenings"
-  to = "/blog-adapting-to-daylight-saving-spring-screenings"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/the-role-of-outdoor-movies-in-promoting-environmental-awareness"
-  to = "/blog-the-role-of-outdoor-movies-in-promoting-environmental-awareness"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/creating-an-amazing-autumn-outdoor-movie-night"
-  to = "/blog-creating-an-amazing-autumn-outdoor-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/outdoor-movie-planning-for-christmas"
-  to = "/blog-outdoor-movie-planning-for-christmas"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/seasonal-outdoor-cinema-atmosphere-ideas"
-  to = "/blog-seasonal-outdoor-cinema-atmosphere-ideas"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/5-great-movie-options-for-family-movie-night"
-  to = "/blog-5-great-movie-options-for-family-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
-  to = "/blog-night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/10-must-have-essentials-for-your-next-outdoor-movie-experience"
-  to = "/blog-10-must-have-essentials-for-your-next-outdoor-movie-experience"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
-  to = "/blog-5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/a-movie-night-out-in-the-time-of-social-distancing"
-  to = "/blog-a-movie-night-out-in-the-time-of-social-distancing"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/how-to-create-a-romantic-outdoor-movie-atmosphere"
-  to = "/blog-how-to-create-a-romantic-outdoor-movie-atmosphere"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/5-family-friendly-outdoor-movies-to-watch-this-summer"
-  to = "/blog-5-family-friendly-outdoor-movies-to-watch-this-summer"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/plan-your-next-summer-bbq-and-movie-night"
-  to = "/blog-plan-your-next-summer-bbq-and-movie-night"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/bring-your-community-together-under-the-stars"
-  to = "/blog-bring-your-community-together-under-the-stars"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/10-tips-on-how-to-throw-an-outdoor-movie-party"
-  to = "/blog-10-tips-on-how-to-throw-an-outdoor-movie-party"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "/premiere-outdoor-movie-packages-compared"
   to = "/blog-premiere-outdoor-movie-packages-compared"
   status = 301
-  force = true
+
+# ─── UTILITY PAGES ─────────────────────────────────────────────
+[[redirects]]
+  from = "/contact-us"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote-new-york"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote-new-jersey"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote-florida"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote-texas"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote-connecticut"
+  to = "/get-a-quote"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/services"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/store"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/store/*"
+  to = "/"
+  status = 301
+
+# ─── JUNK / OLD PLATFORM ARTIFACTS ─────────────────────────────
+[[redirects]]
+  from = "/promo"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/newpage"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/my-post40f6d34e"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/my-postf2f15488"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/reviews43e4f0d5"
+  to = "/reviews"
+  status = 301
+
+# ─── LOCATION PAGES — /locations/* → root level pages ──────────
+# Old site had /locations/state-name/ — new site uses /state-name (root)
+[[redirects]]
+  from = "/locations/new-jersey"
+  to = "/new-jersey"
+  status = 301
+
+[[redirects]]
+  from = "/locations/new-jersey/"
+  to = "/new-jersey"
+  status = 301
+
+[[redirects]]
+  from = "/locations/philadelphia"
+  to = "/philadelphia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/philadelphia/"
+  to = "/philadelphia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/connecticut"
+  to = "/connecticut"
+  status = 301
+
+[[redirects]]
+  from = "/locations/connecticut/"
+  to = "/connecticut"
+  status = 301
+
+[[redirects]]
+  from = "/locations/massachusetts"
+  to = "/massachusetts"
+  status = 301
+
+[[redirects]]
+  from = "/locations/massachusetts/"
+  to = "/massachusetts"
+  status = 301
+
+[[redirects]]
+  from = "/locations/new-york"
+  to = "/new-york"
+  status = 301
+
+[[redirects]]
+  from = "/locations/new-york/"
+  to = "/new-york"
+  status = 301
+
+[[redirects]]
+  from = "/locations/delaware"
+  to = "/delaware"
+  status = 301
+
+[[redirects]]
+  from = "/locations/delaware/"
+  to = "/delaware"
+  status = 301
+
+[[redirects]]
+  from = "/locations/maryland"
+  to = "/maryland"
+  status = 301
+
+[[redirects]]
+  from = "/locations/maryland/"
+  to = "/maryland"
+  status = 301
+
+[[redirects]]
+  from = "/locations/virginia"
+  to = "/virginia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/virginia/"
+  to = "/virginia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/florida"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/locations/florida/"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ohio"
+  to = "/ohio"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ohio/"
+  to = "/ohio"
+  status = 301
+
+[[redirects]]
+  from = "/locations/north-carolina"
+  to = "/north-carolina"
+  status = 301
+
+[[redirects]]
+  from = "/locations/north-carolina/"
+  to = "/north-carolina"
+  status = 301
+
+[[redirects]]
+  from = "/locations/south-carolina"
+  to = "/south-carolina"
+  status = 301
+
+[[redirects]]
+  from = "/locations/south-carolina/"
+  to = "/south-carolina"
+  status = 301
+
+[[redirects]]
+  from = "/locations/georgia"
+  to = "/georgia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/georgia/"
+  to = "/georgia"
+  status = 301
+
+[[redirects]]
+  from = "/locations/eastern-pennsylvania"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/locations/eastern-pennsylvania/"
+  to = "/eastern-pa"
+  status = 301
+
+# ─── CITY PAGES (old operator pages) → nearest state page ──────
+[[redirects]]
+  from = "/orlando"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/miami"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/tampa"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/vero-beach"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/fort-myers"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/gainesville"
+  to = "/florida"
+  status = 301
+
+[[redirects]]
+  from = "/harrisburg"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/doylestown"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/central-pa"
+  to = "/eastern-pa"
+  status = 301
+
+[[redirects]]
+  from = "/fort-worth"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/houston"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/dallas"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/austin"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/lubbock"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/peoria"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Springfield"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/springfield"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/rhode-island"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/texas"
+  to = "/"
+  status = 301
+
+# ─── BLOG POSTS — 404 LIST (new additions) ─────────────────────
+# Old site indexed these at root level without the blog- prefix.
+# New site uses /blog-[slug] naming.
+
+[[redirects]]
+  from = "/vie-for-your-outdoor-movie-night"
+  to = "/blog-vie-for-your-outdoor-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/sweet-and-simple-7-easy-16th-birthday-party-ideas"
+  to = "/blog-sweet-and-simple-7-easy-16th-birthday-party-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-throw-a-successful-outdoor-movie-night"
+  to = "/blog-how-to-throw-a-successful-outdoor-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/5-trending-movie-themes-for-your-winter-outdoor-cinema-and-how-to-execute-them"
+  to = "/blog-5-trending-movie-themes-winter-outdoor-cinema"
+  status = 301
+
+[[redirects]]
+  from = "/the-birth-of-drive-in-theaters"
+  to = "/blog-birth-drive-in-theaters"
+  status = 301
+
+[[redirects]]
+  from = "/the-birth-of-drive-in-theaters-a-history-of-outdoor-cinema-innovation"
+  to = "/blog-birth-drive-in-theaters"
+  status = 301
+
+[[redirects]]
+  from = "/4k-vs-hd-outdoor-projectors-the-ultimate-image-quality-guide"
+  to = "/blog-4k-vs-hd-outdoor-projectors-image-quality-guide"
+  status = 301
+
+[[redirects]]
+  from = "/4k-vs-hd-outdoor-projectors"
+  to = "/blog-4k-vs-hd-outdoor-projectors-image-quality-guide"
+  status = 301
+
+[[redirects]]
+  from = "/corporate-retreats-reimagined-outdoor-movies-for-team-building"
+  to = "/blog-corporate-retreats-outdoor-movies-team-building"
+  status = 301
+
+[[redirects]]
+  from = "/themed-movie-night-ideas"
+  to = "/blog-themed-movie-night-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/double-the-fun-how-to-create-epic-march-madness-movie-nights-that-everyone-will-love"
+  to = "/blog-march-madness-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movies-blending-art-nature-and-technology-for-unforgettable-experiences"
+  to = "/blog-outdoor-movies-blending-art-nature-and-technology-for"
+  status = 301
+
+[[redirects]]
+  from = "/creating-a-cozy-outdoor-movie-lounge-area"
+  to = "/blog-creating-a-cozy-outdoor-movie-lounge-area"
+  status = 301
+
+[[redirects]]
+  from = "/from-silent-films-under-the-stars-to-blockbusters-on-the-big-screen-tracing-the-evolution-of-outdoor-cinema"
+  to = "/blog-from-silent-films-under-the-stars-to-blockbusters-on-the-big"
+  status = 301
+
+[[redirects]]
+  from = "/diy-your-drive-in-movie-party-in-the-back-yard"
+  to = "/blog-diy-your-drive-in-movie-party-in-the-back-yard"
+  status = 301
+
+[[redirects]]
+  from = "/easy-movie-night-snack-ideas"
+  to = "/blog-easy-movie-night-snack-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/family-fun-ideas-for-kid-friendly-outdoor-movie-nights"
+  to = "/blog-family-fun-ideas-for-kid-friendly-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/understanding-local-weather-for-outdoor-movie-planning"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/how-can-you-choose-the-best-movies-for-family-movie-night"
+  to = "/blog-how-can-you-choose-the-best-movies-for-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/the-benefits-of-family-movie-night"
+  to = "/blog-the-benefits-of-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/5-great-benefits-of-watching-movies"
+  to = "/blog-5-great-benefits-of-watching-movies"
+  status = 301
+
+[[redirects]]
+  from = "/planning-safe-summer-events"
+  to = "/blog-planning-safe-summer-events"
+  status = 301
+
+[[redirects]]
+  from = "/spice-it-up-7-creative-date-ideas-for-married-couples"
+  to = "/blog-spice-it-up-7-creative-date-ideas-for-married-couples"
+  status = 301
+
+[[redirects]]
+  from = "/the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the-open-air"
+  to = "/blog-the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the"
+  status = 301
+
+[[redirects]]
+  from = "/pet-friendly-movie-nights-including-furry-friends-in-your-cinema-experience"
+  to = "/blog-pet-friendly-movie-nights-cinema-experience"
+  status = 301
+
+[[redirects]]
+  from = "/movies-for-kids"
+  to = "/blog-movies-for-kids"
+  status = 301
+
+[[redirects]]
+  from = "/the-benefits-of-outdoor-movies-for-mental-health-and-well-being"
+  to = "/blog-the-benefits-of-outdoor-movies-for-mental-health-and-well-being"
+  status = 301
+
+[[redirects]]
+  from = "/open-air-theater-how-to-arrange-an-amazing-outdoor-movie-night"
+  to = "/blog-open-air-theater-how-to-arrange-an-amazing-outdoor-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/8-tips-for-a-great-drive-in-movie-experience"
+  to = "/blog-8-tips-for-a-great-drive-in-movie-experience"
+  status = 301
+
+[[redirects]]
+  from = "/adapting-to-daylight-saving-spring-screenings"
+  to = "/blog-adapting-to-daylight-saving-spring-screenings"
+  status = 301
+
+[[redirects]]
+  from = "/adapting-to-daylight-saving-earlier-start-times-for-spring-screenings"
+  to = "/blog-adapting-to-daylight-saving-spring-screenings"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movie-date-night-ideas-your-guide-to-a-magical-night"
+  to = "/blog-outdoor-movie-date-night-ideas-your-guide-to-a-magical-night"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movie-etiquette-how-to-ensure-everyone-enjoys-the-show"
+  to = "/blog-outdoor-movie-etiquette-how-to-ensure-everyone-enjoys-the-show"
+  status = 301
+
+[[redirects]]
+  from = "/diy-outdoor-movie-night-everything-you-need-to-know"
+  to = "/blog-diy-outdoor-movie-night-everything-you-need-to-know"
+  status = 301
+
+[[redirects]]
+  from = "/tips-for-hosting-winter-outdoor-movie-nights"
+  to = "/blog-tips-for-hosting-winter-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/temperature-tips-for-enjoyable-outdoor-movie-viewing"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/incorporating-outdoor-movies-into-special-events"
+  to = "/blog-incorporating-outdoor-movies-into-special-events"
+  status = 301
+
+[[redirects]]
+  from = "/bringing-nature-to-your-outdoor-movie-experience"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-host-a-kids-birthday-movie-party-under-the-stars"
+  to = "/blog-how-to-host-a-kids-birthday-movie-party-under-the-stars"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movies-in-winter-yes-it-s-possible"
+  to = "/blog-outdoor-movies-in-winter-yes-it-s-possible"
+  status = 301
+
+[[redirects]]
+  from = "/creative-themes-for-outdoor-movie-nights"
+  to = "/blog-creative-themes-for-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/5-tips-for-hosting-the-perfect-drive-in"
+  to = "/blog-5-tips-for-hosting-the-perfect-drive-in"
+  status = 301
+
+[[redirects]]
+  from = "/4-essentials-to-avoid-bugs-during-outdoor-movie-nights"
+  to = "/blog-4-essentials-to-avoid-bugs-during-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/beat-the-winter-blues-with-these-feel-good-movies"
+  to = "/blog-beat-the-winter-blues-with-these-feel-good-movies"
+  status = 301
+
+[[redirects]]
+  from = "/12-gluten-free-snacks-to-eat-during-a-family-movie-night"
+  to = "/blog-12-gluten-free-snacks-to-eat-during-a-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/interactive-outdoor-movie-technology-audience-engagement-in-2025"
+  to = "/blog-interactive-outdoor-movie-technology-audience-engagement"
+  status = 301
+
+[[redirects]]
+  from = "/seasonal-considerations-for-outdoor-movie-programming"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/the-six-golden-rules-of-choosing-the-perfect-outdoor-movie-location"
+  to = "/blog-the-six-golden-rules-of-choosing-the-perfect-outdoor-movie"
+  status = 301
+
+[[redirects]]
+  from = "/6-ways-to-make-your-movie-night-epic"
+  to = "/blog-6-ways-to-make-your-movie-night-epic"
+  status = 301
+
+[[redirects]]
+  from = "/lights-camera-green-action-making-your-outdoor-movie-night-eco-friendly"
+  to = "/blog-lights-camera-green-action-making-your-outdoor-movie-night-eco"
+  status = 301
+
+[[redirects]]
+  from = "/harvest-moon-movie-magic-pairing-outdoor-screening-with-lunar-events"
+  to = "/blog-harvest-moon-movie-magic-lunar-events"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate-guide"
+  to = "/blog-how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate"
+  status = 301
+
+[[redirects]]
+  from = "/15-best-healthy-snacks-to-eat-durante-a-family-movie-night"
+  to = "/blog-15-best-healthy-snacks-to-eat-during-a-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/15-best-healthy-snacks-to-eat-during-a-family-movie-night"
+  to = "/blog-15-best-healthy-snacks-to-eat-during-a-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/looking-for-a-unique-and-special-way-to-propose-marriage"
+  to = "/blog-looking-for-a-unique-and-special-way-to-propose-marriage"
+  status = 301
+
+[[redirects]]
+  from = "/best-event-packages-for-large-crowds"
+  to = "/blog-best-event-packages-for-large-crowds"
+  status = 301
+
+# ─── BLOG POSTS — previously redirected (fixing blog- prefix) ──
+[[redirects]]
+  from = "/the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
+  to = "/blog-the-rise-of-outdoor-movie-festivals-a-cultural-phenomenon"
+  status = 301
+
+[[redirects]]
+  from = "/4-ways-to-stream-movies-outdoors"
+  to = "/blog-4-ways-to-stream-movies-outdoors"
+  status = 301
+
+[[redirects]]
+  from = "/tips-for-planning-a-super-bowl-bash-to-remember"
+  to = "/blog-tips-for-planning-a-super-bowl-bash-to-remember"
+  status = 301
+
+[[redirects]]
+  from = "/5-indoor-movie-night-activities-for-families"
+  to = "/blog-5-indoor-movie-night-activities-for-families"
+  status = 301
+
+[[redirects]]
+  from = "/under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
+  to = "/blog-under-the-stars-your-ultimate-guide-to-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor-movie-night"
+  to = "/blog-outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor"
+  status = 301
+
+[[redirects]]
+  from = "/planning-the-perfect-teen-party"
+  to = "/blog-planning-the-perfect-teen-party"
+  status = 301
+
+[[redirects]]
+  from = "/holiday-social-distancing-outdoor-movie-ideas"
+  to = "/blog-holiday-social-distancing-outdoor-movie-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/great-holiday-movie-options"
+  to = "/blog-great-holiday-movie-options"
+  status = 301
+
+[[redirects]]
+  from = "/making-outdoor-movies-magical-for-all"
+  to = "/blog-making-outdoor-movies-magical-for-all"
+  status = 301
+
+[[redirects]]
+  from = "/celebrate-safely-for-your-project-graduation-with-outdoor-movies"
+  to = "/blog-celebrate-safely-for-your-project-graduation-with-outdoor-movies"
+  status = 301
+
+[[redirects]]
+  from = "/premiere-outdoor-movies-around-the-world"
+  to = "/blog-premiere-outdoor-movies-around-the-world"
+  status = 301
+
+[[redirects]]
+  from = "/planning-a-spring-break-staycation-movie-night-to-remember"
+  to = "/blog-planning-a-spring-break-staycation-movie-night-to-remember"
+  status = 301
+
+[[redirects]]
+  from = "/party-tips-for-your-graduate"
+  to = "/blog-party-tips-for-your-graduate"
+  status = 301
+
+[[redirects]]
+  from = "/what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
+  to = "/blog-what-are-the-top-10-kids-outdoor-movies-for-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-make-the-perfect-recurring-movie-event"
+  to = "/blog-how-to-make-the-perfect-recurring-movie-event"
+  status = 301
+
+[[redirects]]
+  from = "/top-movies-for-toddlers"
+  to = "/blog-top-movies-for-toddlers"
+  status = 301
+
+[[redirects]]
+  from = "/the-role-of-outdoor-movies-in-promoting-environmental-awareness"
+  to = "/blog-the-role-of-outdoor-movies-in-promoting-environmental-awareness"
+  status = 301
+
+[[redirects]]
+  from = "/creating-an-amazing-autumn-outdoor-movie-night"
+  to = "/blog-creating-an-amazing-autumn-outdoor-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/outdoor-movie-planning-for-christmas"
+  to = "/blog-outdoor-movie-planning-for-christmas"
+  status = 301
+
+[[redirects]]
+  from = "/seasonal-outdoor-cinema-atmosphere-ideas"
+  to = "/blog-seasonal-outdoor-cinema-atmosphere-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/5-great-movie-options-for-family-movie-night"
+  to = "/blog-5-great-movie-options-for-family-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
+  to = "/blog-night-sky-cinema-merging-stargazing-with-outdoor-movie-nights"
+  status = 301
+
+[[redirects]]
+  from = "/10-must-have-essentials-for-your-next-outdoor-movie-experience"
+  to = "/blog-10-must-have-essentials-for-your-next-outdoor-movie-experience"
+  status = 301
+
+[[redirects]]
+  from = "/5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
+  to = "/blog-5-easy-steps-to-building-your-own-popcorn-bar-for-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/a-movie-night-out-in-the-time-of-social-distancing"
+  to = "/blog-a-movie-night-out-in-the-time-of-social-distancing"
+  status = 301
+
+[[redirects]]
+  from = "/how-to-create-a-romantic-outdoor-movie-atmosphere"
+  to = "/blog-how-to-create-a-romantic-outdoor-movie-atmosphere"
+  status = 301
+
+[[redirects]]
+  from = "/5-family-friendly-outdoor-movies-to-watch-this-summer"
+  to = "/blog-5-family-friendly-outdoor-movies-to-watch-this-summer"
+  status = 301
+
+[[redirects]]
+  from = "/plan-your-next-summer-bbq-and-movie-night"
+  to = "/blog-plan-your-next-summer-bbq-and-movie-night"
+  status = 301
+
+[[redirects]]
+  from = "/bring-your-community-together-under-the-stars"
+  to = "/blog-bring-your-community-together-under-the-stars"
+  status = 301
+
+[[redirects]]
+  from = "/10-tips-on-how-to-throw-an-outdoor-movie-party"
+  to = "/blog-10-tips-on-how-to-throw-an-outdoor-movie-party"
+  status = 301
 
 [[redirects]]
   from = "/5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
   to = "/blog-5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/why-outdoor-movies-are-the-ultimate-summer-activity"
   to = "/blog-why-outdoor-movies-are-the-ultimate-summer-activity"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/post-prom-party-movie-package-ideas"
   to = "/blog-post-prom-party-movie-package-ideas"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/everything-you-require-to-throw-the-ultimate-backyard-movie-night"
   to = "/blog-everything-you-require-to-throw-the-ultimate-backyard-movie-night"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/how-outdoor-cinema-offers-an-escape-from-modern-digital-life"
   to = "/blog-how-outdoor-cinema-offers-an-escape-from-modern-digital-life"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/great-tips-for-your-next-football-viewing-party"
   to = "/blog-great-tips-for-your-next-football-viewing-party"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/open-air-cinemas-in-the-1920s"
   to = "/blog-open-air-cinemas-in-the-1920s"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/creative-ideas-to-throw-an-amazing-backyard-halloween-party"
   to = "/blog-creative-ideas-to-throw-an-amazing-backyard-halloween-party"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/hosting-the-best-holiday-movie-party-this-season"
   to = "/blog-hosting-the-best-holiday-movie-party-this-season"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/premiere-outdoor-movies-favorite-rentals"
   to = "/blog-premiere-outdoor-movies-favorite-rentals"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/top-2019-summer-movies"
   to = "/blog-top-2019-summer-movies"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/looking-for-great-family-reunion-ideas-we-have-you-covered"
   to = "/blog-looking-for-great-family-reunion-ideas-we-have-you-covered"
   status = 301
-  force = true
-
-# Blog redirects — two patterns:
-# 1. /blog/slug or /blog/slug/ (WordPress-style paths Google may have indexed)
-# 2. Long-form slugs that were in old canonicals but don't match the actual filename
-
-# Pattern 1: catch-all for /blog/* → strip the /blog/ prefix
-# Netlify splat redirect: :splat captures everything after /blog/
-[[redirects]]
-  from = "/blog/:splat"
-  to = "/:splat"
-  status = 301
-  force = true
-
-# Pattern 2: long-slug mismatches (specific 1:1 redirects)
-[[redirects]]
-  from = "/4k-vs-hd-outdoor-projectors-the-ultimate-image-quality-guide"
-  to = "/4k-vs-hd-outdoor-projectors-image-quality-guide"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/5-trending-movie-themes-for-your-winter-outdoor-cinema-and-how-to-execute-them"
-  to = "/5-trending-movie-themes-winter-outdoor-cinema"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "/beyond-the-living-room-how-outdoor-movie-experiences-are-changing-home-entertainment"
-  to = "/beyond-living-room-outdoor-movie-home-entertainment"
+  to = "/blog-beyond-living-room-outdoor-movie-home-entertainment"
   status = 301
-  force = true
-
-[[redirects]]
-  from = "/the-birth-of-drive-in-theaters-a-history-of-outdoor-cinema-innovation"
-  to = "/birth-drive-in-theaters"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/corporate-retreats-reimagined-outdoor-movies-for-team-building"
-  to = "/corporate-retreats-outdoor-movies-team-building"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/from-silent-films-under-the-stars-to-blockbusters-on-the-big-screen-tracing-the-evolution-of-outdoor-cinema"
-  to = "/from-silent-films-under-the-stars-to-blockbusters-on-the-big"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/harvest-moon-movie-magic-pairing-outdoor-screening-with-lunar-events"
-  to = "/harvest-moon-movie-magic-lunar-events"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate-guide"
-  to = "/how-to-throw-your-own-outdoor-movie-viewing-party-the-ultimate"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/interactive-outdoor-movie-technology-audience-engagement-in-2025"
-  to = "/interactive-outdoor-movie-technology-audience-engagement"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/lights-camera-green-action-making-your-outdoor-movie-night-eco-friendly"
-  to = "/lights-camera-green-action-making-your-outdoor-movie-night-eco"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor-movie-night"
-  to = "/outdoor-movie-night-9-great-tips-for-hosting-a-best-outdoor"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/outdoor-movies-blending-art-nature-and-technology-for-unforgettable-experiences"
-  to = "/outdoor-movies-blending-art-nature-and-technology-for"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/pet-friendly-movie-nights-including-furry-friends-in-your-cinema-experience"
-  to = "/pet-friendly-movie-nights-cinema-experience"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "/seasonal-sensations-adapting-your-outdoor-cinema-theme-to-match-the-time-of-year"
-  to = "/seasonal-sensations-adapting-outdoor-cinema-theme"
+  to = "/blog-seasonal-sensations-adapting-outdoor-cinema-theme"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the-open-air"
-  to = "/the-art-of-outdoor-movie-snacking-elevate-your-experience-in-the"
+  from = "/complete-guide-planning-outdoor-movie-night"
+  to = "/blog-complete-guide-planning-outdoor-movie-night"
   status = 301
-  force = true
 
 [[redirects]]
-  from = "/the-six-golden-rules-of-choosing-the-perfect-outdoor-movie-location"
-  to = "/the-six-golden-rules-of-choosing-the-perfect-outdoor-movie"
+  from = "/corporate-community-outdoor-movie-events"
+  to = "/blog-corporate-community-outdoor-movie-events"
   status = 301
-  force = true
 
+[[redirects]]
+  from = "/winter-outdoor-movie-magic"
+  to = "/blog-winter-outdoor-movie-magic"
+  status = 301
+
+[[redirects]]
+  from = "/some-interesting-new-years-party-ideas-to-ring-in-2021"
+  to = "/blog-some-interesting-new-years-party-ideas-to-ring-in-2021"
+  status = 301
+
+[[redirects]]
+  from = "/5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
+  to = "/blog-5-tips-for-the-best-viewing-at-your-outdoor-movie-event"
+  status = 301
+
+# ─── /blog/* CATCH-ALL — send to blog index (no redirect chains) ─
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog"
+  status = 301
+
+# ═══════════════════════════════════════════════════════════════
+# SECURITY HEADERS
+# ═══════════════════════════════════════════════════════════════
 [[headers]]
   for = "/*"
   [headers.values]
-    # Prevent clickjacking — stops your site being embedded in iframes on other sites
     X-Frame-Options = "SAMEORIGIN"
-
-    # Stop browsers from guessing/sniffing file types (MIME confusion attacks)
     X-Content-Type-Options = "nosniff"
-
-    # Control what referrer info is shared when visitors click links off your site
     Referrer-Policy = "strict-origin-when-cross-origin"
-
-    # Restrict browser features — site doesn't need camera, mic, or geolocation access
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-    # Content Security Policy — allow only the specific external sources the site actually uses
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://elfsightcdn.com https://static.elfsight.com https://apps.elfsight.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; media-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.elfsight.com https://service.elfsight.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.netlify.com;"
-
-    # HTTPS enforced for 1 year — already present but setting explicitly here too
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
