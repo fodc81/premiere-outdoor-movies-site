@@ -35,6 +35,18 @@
   to = "/careers"
   status = 301
 
+# ─── MISSING / REMOVED PAGES ────────────────────────────────────
+# gallery.html does not exist — redirect to Reviews (best equivalent)
+[[redirects]]
+  from = "/gallery"
+  to = "/reviews"
+  status = 301
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/reviews"
+  status = 301
+
 # ─── PACKAGE PAGES ─────────────────────────────────────────────
 [[redirects]]
   from = "/backyard-movie-package"
