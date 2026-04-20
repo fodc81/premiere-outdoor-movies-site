@@ -47,6 +47,12 @@
   to = "/reviews"
   status = 301
 
+# fort-myers was an old Wix page — redirect to Florida territory page
+[[redirects]]
+  from = "/fort-myers"
+  to = "/florida"
+  status = 301
+
 # ─── PACKAGE PAGES ─────────────────────────────────────────────
 [[redirects]]
   from = "/backyard-movie-package"
