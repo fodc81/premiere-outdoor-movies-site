@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Premiere Outdoor Movies</title>
+  <meta name="description" content="Privacy Policy for Premiere Outdoor Movies. Learn how we collect, use, and protect your personal information." />
+  <link rel="canonical" href="https://premiereoutdoormovie.com/privacy-policy" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #C8102E; --red-dark: #a00d24; --navy: #0D1B2A; --navy-light: #162033; --charcoal: #1a1a1a; --offwhite: #f7f6f4; --gray: #6b7280; --light-gray: #e5e7eb; --white: #ffffff; --font-display: 'Barlow Condensed', sans-serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; background: rgba(13,27,42,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 52px; width: auto; mix-blend-mode: screen; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 500; text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; }
+    .nav-links a:hover { color: white; }
+    .nav-cta { background: var(--red); color: white !important; padding: 10px 20px; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .nav-dropdown > a::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid rgba(255,255,255,0.6); transition: transform 0.2s; margin-top: 1px; }
+    .nav-dropdown.open > a::after { transform: rotate(180deg); border-top-color: white; }
+    .nav-dropdown.open > a, .nav-dropdown > a:hover { color: white; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(13,27,42,0.98); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 240px; z-index: 200; max-height: calc(100vh - 90px); overflow-y: auto; }
+    .dropdown-menu::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; color: rgba(255,255,255,0.8) !important; font-size: 13px !important; font-weight: 500 !important; text-decoration: none; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    .dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: white !important; }
+    .dropdown-menu .dd-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 6px 4px; }
+    .dropdown-menu .dd-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9); padding: 6px 12px 2px; display: block; }
+    .dropdown-menu a .dd-icon { font-size: 15px; width: 20px; text-align: center; flex-shrink: 0; }
+    .dropdown-menu .pkg-price { margin-left: auto; font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 400; }
+    .dropdown-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 4px 8px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: rgba(13,27,42,0.99); z-index: 99; padding: 24px; flex-direction: column; overflow-y: auto; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-weight: 500; }
+    .mobile-menu .mobile-cta { color: var(--red) !important; font-weight: 700 !important; border-bottom: none; }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--navy); margin-top: 72px; padding: 80px 48px 64px; position: relative; overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; inset: 0; background: url('./hero-bg.webp') center/cover no-repeat; opacity: 0.08; pointer-events: none; }
+    .page-hero .inner { position: relative; z-index: 1; max-width: 760px; }
+    .page-hero .eyebrow { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; color: white; text-transform: uppercase; line-height: 1.05; margin-bottom: 20px; }
+    .page-hero p { color: rgba(255,255,255,0.7); font-size: 1.05rem; line-height: 1.75; max-width: 600px; }
+
+    /* POLICY CONTENT */
+    .policy-wrap { max-width: 860px; margin: 0 auto; padding: 72px 48px 96px; }
+    .policy-wrap .last-updated { font-size: 13px; color: var(--gray); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--light-gray); }
+
+    .policy-section { margin-bottom: 52px; }
+    .policy-section h2 { font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--red); display: inline-block; }
+    .policy-section p { font-size: 15px; color: #374151; line-height: 1.8; margin-bottom: 16px; }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 10px; }
+    .policy-section ul li { font-size: 15px; color: #374151; line-height: 1.7; padding-left: 20px; position: relative; }
+    .policy-section ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+
+    /* SMS CALLOUT BOX */
+    .sms-callout { background: var(--navy); border-left: 4px solid var(--red); border-radius: 0 10px 10px 0; padding: 24px 28px; margin: 24px 0; }
+    .sms-callout p { color: rgba(255,255,255,0.9) !important; margin-bottom: 0 !important; font-weight: 500; }
+    .sms-callout strong { color: white; }
+
+    /* CONTACT BLOCK */
+    .contact-block { background: var(--offwhite); border-radius: 12px; padding: 28px 32px; margin-top: 16px; }
+    .contact-block p { font-size: 15px; color: #374151; line-height: 1.8; margin-bottom: 8px; }
+    .contact-block p:last-child { margin-bottom: 0; }
+    .contact-block a { color: var(--red); text-decoration: none; font-weight: 600; }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 48px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-brand .nav-logo { margin-bottom: 12px; display: inline-flex; }
+    .footer-links h4 { color: white; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-bottom a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 56px 24px 48px; }
+      .policy-wrap { padding: 48px 24px 72px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+  <link rel="icon" type="image/webp" href="./logo-white.webp" />
+  <link rel="apple-touch-icon" href="./logo-white.webp" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVPF9ZSC6Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GVPF9ZSC6Z');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-logo">
+    <img src="./logo-white.webp" alt="Premiere Outdoor Movies" loading="lazy" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li class="nav-dropdown" id="pkgDrop">
+      <a href="#">Packages</a>
+      <div class="dropdown-menu">
+        <a href="./indoor-event-package.html"><span class="dd-icon">🏠</span> Indoor Event <span class="pkg-price">from $399</span></a>
+        <a href="./backyard-party-package.html"><span class="dd-icon">🏡</span> Backyard Party <span class="pkg-price">from $449</span></a>
+        <a href="./premiere-event-package.html"><span class="dd-icon">⭐</span> Premiere Event <span class="pkg-price">from $799</span></a>
+        <a href="./blockbuster-event-package.html"><span class="dd-icon">🎬</span> Blockbuster Event <span class="pkg-price">from $899</span></a>
+        <div class="dropdown-divider"></div>
+        <a href="./ultimate-event-package.html"><span class="dd-icon">🏟</span> Ultimate Event <span class="pkg-price">from $2,300</span></a>
+        <a href="./drive-in-package.html"><span class="dd-icon">🚗</span> Drive-In Event <span class="pkg-price">custom quote</span></a>
+      </div>
+    </li>
+    <li class="nav-dropdown" id="locDrop">
+      <a href="#">Locations</a>
+      <div class="dropdown-menu">
+        <a href="./new-jersey.html"><span class="dd-icon">🎡</span> New Jersey</a>
+        <a href="./philadelphia.html"><span class="dd-icon">🔔</span> Philadelphia Area</a>
+        <a href="./eastern-pa.html"><span class="dd-icon">🌾</span> Eastern Pennsylvania</a>
+        <a href="./delaware.html"><span class="dd-icon">💎</span> Delaware</a>
+        <a href="./maryland.html"><span class="dd-icon">🦀</span> Maryland</a>
+        <a href="./virginia.html"><span class="dd-icon">🌸</span> Virginia</a>
+        <a href="./new-york.html"><span class="dd-icon">🗽</span> New York</a>
+        <a href="./connecticut.html"><span class="dd-icon">🌿</span> Connecticut</a>
+        <a href="./massachusetts.html"><span class="dd-icon">🦞</span> Massachusetts</a>
+        <a href="./florida.html"><span class="dd-icon">🌴</span> Florida</a>
+        <hr class="dd-divider" />
+        <p class="dd-label">Coming Soon — Operator Wanted</p>
+        <a href="./north-carolina.html"><span class="dd-icon">🌲</span> North Carolina</a>
+        <a href="./south-carolina.html"><span class="dd-icon">🌴</span> South Carolina</a>
+        <a href="./georgia.html"><span class="dd-icon">🍑</span> Georgia</a>
+        <a href="./ohio.html"><span class="dd-icon">🌻</span> Ohio</a>
+      </div>
+    </li>
+    <li><a href="./reviews.html">Reviews</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="tel:8777674338" class="nav-cta">📞 877-767-4338</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="inner">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Your privacy matters to us. This policy explains what personal information we collect, how we use it, and your rights as a customer of Premiere Outdoor Movies.</p>
+  </div>
+</div>
+
+<main>
+  <div class="policy-wrap">
+    <p class="last-updated"><strong>Premiere Outdoor Movies</strong> &nbsp;|&nbsp; Last Updated: April 27, 2025 &nbsp;|&nbsp; Effective Date: April 27, 2025</p>
+
+    <!-- 1. INFORMATION WE COLLECT -->
+    <div class="policy-section">
+      <h2>1. Information We Collect</h2>
+      <p>When you interact with Premiere Outdoor Movies — whether through our website, quote forms, phone calls, text messages, or email — we may collect the following types of personal information:</p>
+      <ul>
+        <li><strong>Contact Information:</strong> Your name, email address, phone number, and mailing or event address.</li>
+        <li><strong>Event Details:</strong> Information about your event, including date, location, guest count, venue type, and any special requirements you share with us.</li>
+        <li><strong>Communication Records:</strong> Records of phone calls, text messages, and email correspondence you have with us.</li>
+        <li><strong>Payment Information:</strong> Billing details collected when you book a service or make a deposit. Payment card data is processed securely through our payment processor and is not stored on our systems.</li>
+        <li><strong>Website Usage Data:</strong> Information about how you use our website, including pages visited, time spent, referring URLs, device type, browser type, and IP address. This data is collected automatically via cookies and analytics tools.</li>
+        <li><strong>Marketing Preferences:</strong> Your consent status for email newsletters and SMS communications.</li>
+      </ul>
+      <p>We only collect information that is necessary to provide our services or to communicate with you effectively.</p>
+    </div>
+
+    <!-- 2. HOW WE USE YOUR INFORMATION -->
+    <div class="policy-section">
+      <h2>2. How We Use Your Information</h2>
+      <p>We use the personal information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To respond to inquiries and provide quotes:</strong> When you submit a quote request or contact us, we use your information to prepare and deliver a customized event proposal.</li>
+        <li><strong>To book and manage your event:</strong> We use your contact and event information to schedule, coordinate, and deliver your outdoor cinema experience.</li>
+        <li><strong>To send appointment reminders and event updates:</strong> We may contact you by phone, email, or SMS to confirm bookings, share pre-event details, and provide day-of logistics.</li>
+        <li><strong>To send marketing communications:</strong> With your consent, we may send you email newsletters, seasonal promotions, and SMS messages about our services. You may opt out at any time.</li>
+        <li><strong>To improve our website and services:</strong> We use analytics data to understand how visitors use our site and to improve the quality of our content and customer experience.</li>
+        <li><strong>To comply with legal obligations:</strong> We may use or retain your information as required by applicable law, regulation, or legal process.</li>
+      </ul>
+    </div>
+
+    <!-- 3. SMS COMMUNICATIONS -->
+    <div class="policy-section">
+      <h2>3. SMS Communications</h2>
+      <p>When you provide your phone number and consent to receive text messages from Premiere Outdoor Movies, you may receive SMS communications including booking confirmations, event reminders, follow-up messages, and occasional promotional offers.</p>
+      <p>You can opt out of SMS communications at any time by replying <strong>STOP</strong> to any message. After opting out, you will receive a single confirmation message and no further texts. For help, reply <strong>HELP</strong> or contact us at <a href="mailto:events@premiereoutdoormovies.com" style="color:var(--red);font-weight:600;">events@premiereoutdoormovies.com</a>.</p>
+      <p>Message and data rates may apply. Message frequency varies based on your interaction with us.</p>
+
+      <div class="sms-callout">
+        <p><strong>Important:</strong> SMS consent and phone numbers collected for the purpose of SMS communications are <strong>not shared with third parties or affiliates for their own marketing purposes.</strong> Your consent to receive SMS messages from Premiere Outdoor Movies applies only to communications from Premiere Outdoor Movies.</p>
+      </div>
+    </div>
+
+    <!-- 4. WHO WE SHARE YOUR INFORMATION WITH -->
+    <div class="policy-section">
+      <h2>4. Who We Share Your Information With</h2>
+      <p>Premiere Outdoor Movies does not sell your personal information. We may share your information only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Owner-Operators:</strong> If your event is located in a territory served by one of our licensed owner-operators, we may share your event details and contact information with that operator solely for the purpose of coordinating and delivering your event.</li>
+        <li><strong>Email Marketing Platform:</strong> We use Mailchimp to manage and send our email newsletter. Your email address and name may be stored in Mailchimp in accordance with their privacy policy if you have subscribed to our newsletter.</li>
+        <li><strong>Analytics Providers:</strong> We use Google Analytics to collect anonymized website usage data. Google may process this data on our behalf in accordance with their terms of service.</li>
+        <li><strong>Payment Processors:</strong> If you submit payment online, your billing information is handled by our payment processor. We do not store full credit card numbers on our systems.</li>
+        <li><strong>Legal Requirements:</strong> We may disclose your information if required by law, court order, or government authority, or if we believe disclosure is necessary to protect the rights or safety of any person.</li>
+      </ul>
+      <p><strong>SMS consent is not shared with third parties.</strong> Phone numbers collected for SMS communications are never sold, rented, or shared with outside companies for their marketing purposes.</p>
+    </div>
+
+    <!-- 5. COOKIES AND TRACKING -->
+    <div class="policy-section">
+      <h2>5. Cookies &amp; Tracking Technologies</h2>
+      <p>Our website uses cookies and similar tracking technologies to improve your browsing experience and analyze site traffic. Specifically, we use:</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> Collects anonymized information about how visitors use our site (pages viewed, time on site, traffic sources). This data helps us improve our content and user experience. You can opt out of Google Analytics tracking by using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--red);font-weight:600;">Google Analytics Opt-Out Browser Add-On</a>.</li>
+        <li><strong>Essential Cookies:</strong> Small data files necessary for basic site functionality, such as remembering form entries during a session.</li>
+      </ul>
+      <p>Most web browsers allow you to control cookies through their settings. Disabling cookies may affect some features of the website.</p>
+    </div>
+
+    <!-- 6. DATA RETENTION -->
+    <div class="policy-section">
+      <h2>6. Data Retention</h2>
+      <p>We retain your personal information for as long as necessary to provide our services and fulfill the purposes described in this policy. Customer event records are generally retained for up to five years for business and legal record-keeping purposes. You may request deletion of your personal information at any time by contacting us (see Section 8).</p>
+    </div>
+
+    <!-- 7. YOUR RIGHTS -->
+    <div class="policy-section">
+      <h2>7. Your Privacy Rights</h2>
+      <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+        <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request that we delete your personal information, subject to legal retention requirements.</li>
+        <li><strong>Opt-Out of Marketing:</strong> Unsubscribe from email marketing at any time by clicking the "unsubscribe" link in any email we send, or by replying STOP to any SMS message.</li>
+        <li><strong>Data Portability:</strong> Request a copy of your data in a structured, machine-readable format where applicable.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the information in Section 8 below.</p>
+    </div>
+
+    <!-- 8. CONTACT US -->
+    <div class="policy-section">
+      <h2>8. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, want to exercise your privacy rights, or have concerns about how your information is being used, please contact us:</p>
+      <div class="contact-block">
+        <p><strong>Premiere Outdoor Movies</strong></p>
+        <p>Email: <a href="mailto:events@premiereoutdoormovies.com">events@premiereoutdoormovies.com</a></p>
+        <p>Phone: <a href="tel:8777674338">(877) 767-4338</a></p>
+        <p>Website: <a href="https://premiereoutdoormovie.com">premiereoutdoormovie.com</a></p>
+      </div>
+      <p style="margin-top:20px;">We will respond to all privacy-related requests within a reasonable timeframe.</p>
+    </div>
+
+    <!-- 9. CHANGES TO THIS POLICY -->
+    <div class="policy-section">
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make material changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Your continued use of our services after any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="./index.html" class="nav-logo"><img src="./logo-white.webp" alt="Premiere Outdoor Movies" loading="lazy"/></a>
+      <p style="font-size:13px; color:rgba(255,255,255,0.5); max-width:240px; line-height:1.7; margin-top:12px;">Professional outdoor cinema events since 2009. Serving 10 states with full-service crews and state-of-the-art equipment.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Packages</h4>
+      <ul>
+        <li><a href="./backyard-party-package.html">Backyard Party</a></li>
+        <li><a href="./indoor-event-package.html">Indoor Event</a></li>
+        <li><a href="./premiere-event-package.html">Premiere Event</a></li>
+        <li><a href="./blockbuster-event-package.html">Blockbuster Event</a></li>
+        <li><a href="./ultimate-event-package.html">Ultimate Event</a></li>
+        <li><a href="./drive-in-package.html">Drive-In Event</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Active Markets</h4>
+      <ul>
+        <li><a href="./new-jersey.html">New Jersey</a></li>
+        <li><a href="./philadelphia.html">Philadelphia Area</a></li>
+        <li><a href="./eastern-pa.html">Eastern Pennsylvania</a></li>
+        <li><a href="./new-york.html">New York</a></li>
+        <li><a href="./connecticut.html">Connecticut</a></li>
+        <li><a href="./massachusetts.html">Massachusetts</a></li>
+        <li><a href="./delaware.html">Delaware</a></li>
+        <li><a href="./maryland.html">Maryland</a></li>
+        <li><a href="./virginia.html">Virginia</a></li>
+        <li><a href="./florida.html">Florida</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Expanding To</h4>
+      <ul>
+        <li><a href="./north-carolina.html">North Carolina</a></li>
+        <li><a href="./south-carolina.html">South Carolina</a></li>
+        <li><a href="./georgia.html">Georgia</a></li>
+        <li><a href="./ohio.html">Ohio</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./reviews.html">Reviews</a></li>
+        <li><a href="./careers.html">Careers</a></li>
+        <li><a href="./get-a-quote.html">Get a Quote</a></li>
+        <li><a href="./movie-licensing.html">Movie Licensing</a></li>
+        <li><a href="./media-kit.html">Media Kit</a></li>
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Premiere Outdoor Movies. All rights reserved.</span>
+    <div style="display:flex;gap:20px;">
+      <a href="./index.html">Home</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const pkgDrop = document.getElementById('pkgDrop');
+  if (pkgDrop) { let t; pkgDrop.addEventListener('mouseenter', () => { clearTimeout(t); pkgDrop.classList.add('open'); }); pkgDrop.addEventListener('mouseleave', () => { t = setTimeout(() => pkgDrop.classList.remove('open'), 200); }); }
+  const locDrop = document.getElementById('locDrop');
+  if (locDrop) { let t2; locDrop.addEventListener('mouseenter', () => { clearTimeout(t2); locDrop.classList.add('open'); }); locDrop.addEventListener('mouseleave', () => { t2 = setTimeout(() => locDrop.classList.remove('open'), 200); }); locDrop.querySelectorAll('.dropdown-menu a').forEach(l => l.addEventListener('click', () => locDrop.classList.remove('open'))); document.addEventListener('click', (e) => { if (!locDrop.contains(e.target)) locDrop.classList.remove('open'); }); }
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) { hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open')); }
+</script>
+</body>
+</html>
