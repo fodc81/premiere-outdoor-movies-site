@@ -267,10 +267,10 @@
     }
     .hero-slide.active { opacity: 1; }
     .hero-slide-1 { background-image: url('./hero-bg.webp'); }
-    .hero-slide-2 { background-image: url('./hero-slide-2.webp'); }
-    .hero-slide-3 { background-image: url('./hero-slide-3.webp'); }
-    .hero-slide-4 { background-image: url('./hero-slide-4.webp'); }
-    .hero-slide-5 { background-image: url('./hero-slide-5.webp'); }
+    .hero-slide-2 { /* background loaded lazily via JS */ }
+    .hero-slide-3 { /* background loaded lazily via JS */ }
+    .hero-slide-4 { /* background loaded lazily via JS */ }
+    .hero-slide-5 { /* background loaded lazily via JS */ }
 
     /* Dark overlay on every slide */
     .hero-slide::after {
@@ -899,6 +899,7 @@
       .hero-trust { flex-direction: column; gap: 10px; align-items: center; }
     }
   </style>
+  <link rel="preload" as="image" href="./hero-bg.webp" fetchpriority="high">
   <link rel="icon" type="image/webp" href="./logo-white.webp" />
   <link rel="apple-touch-icon" href="./logo-white.webp" />
   <!-- Google tag (gtag.js) -->
@@ -1018,10 +1019,10 @@
 <section class="hero" id="heroSection">
   <div class="hero-bg" id="heroBg">
     <div class="hero-slide hero-slide-1 active"></div>
-    <div class="hero-slide hero-slide-2"></div>
-    <div class="hero-slide hero-slide-3"></div>
-    <div class="hero-slide hero-slide-4"></div>
-    <div class="hero-slide hero-slide-5"></div>
+    <div class="hero-slide hero-slide-2" data-bg="./hero-slide-2.webp"></div>
+    <div class="hero-slide hero-slide-3" data-bg="./hero-slide-3.webp"></div>
+    <div class="hero-slide hero-slide-4" data-bg="./hero-slide-4.webp"></div>
+    <div class="hero-slide hero-slide-5" data-bg="./hero-slide-5.webp"></div>
   </div>
   <div class="hero-silhouette"></div>
   <div class="hero-dots">
@@ -1600,7 +1601,12 @@
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = (idx + slides.length) % slides.length;
-      slides[current].classList.add('active');
+      // Lazy-load the background image on first activation
+      const slide = slides[current];
+      if (slide.dataset.bg && !slide.style.backgroundImage) {
+        slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+      }
+      slide.classList.add('active');
       dots[current].classList.add('active');
     }
 
