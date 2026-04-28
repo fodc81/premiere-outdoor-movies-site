@@ -2,6 +2,18 @@
   publish = "."
   functions = "netlify/functions"
 
+# ── Asset optimization (CSS/JS minification + image compression) ──
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.images]
+  compress = true
+
 # ═══════════════════════════════════════════════════════════════
 # 301 REDIRECTS — Recover SEO equity from old site URLs
 # Last updated: April 2026 — full audit after site redesign
