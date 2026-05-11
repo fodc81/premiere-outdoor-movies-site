@@ -67,13 +67,13 @@
 
 # ─── PACKAGE PAGES ─────────────────────────────────────────────
 [[redirects]]
-  from = "/backyard-movie-package"
-  to = "/backyard-party-package"
+  from = "/backyard-party-package"
+  to = "/backyard-movie-package"
   status = 301
 
 [[redirects]]
   from = "/packages/backyard-party/*"
-  to = "/backyard-party-package"
+  to = "/backyard-movie-package"
   status = 301
 
 [[redirects]]
@@ -173,7 +173,7 @@
 
 [[redirects]]
   from = "/backyard-movie-package-texas"
-  to = "/backyard-party-package"
+  to = "/backyard-movie-package"
   status = 301
 
 [[redirects]]
