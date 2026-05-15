@@ -19,13 +19,8 @@
 # Last updated: April 2026 — full audit after site redesign
 # ═══════════════════════════════════════════════════════════════
 
-# ─── NON-WWW → WWW (canonical version is www) ──────────────────
-# Must come first and use force=true to override file serving
-[[redirects]]
-  from = "https://premiereoutdoormovie.com/*"
-  to = "https://www.premiereoutdoormovie.com/:splat"
-  status = 301
-  force = true
+# ─── NON-WWW → WWW handled via Netlify domain settings ─────────
+# Redirect rule removed — www/non-www redirect managed in Netlify dashboard
 
 # ─── .html EXTENSION REMOVAL (eliminates .html duplicate URLs) ──
 # Redirects /page.html → /page for all pages
