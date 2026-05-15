@@ -19,11 +19,11 @@
 # Last updated: April 2026 — full audit after site redesign
 # ═══════════════════════════════════════════════════════════════
 
-# ─── WWW → NON-WWW (fixes 59 "alternate canonical" GSC issues) ──
+# ─── NON-WWW → WWW (canonical version is www) ──────────────────
 # Must come first and use force=true to override file serving
 [[redirects]]
-  from = "https://www.premiereoutdoormovie.com/*"
-  to = "https://premiereoutdoormovie.com/:splat"
+  from = "https://premiereoutdoormovie.com/*"
+  to = "https://www.premiereoutdoormovie.com/:splat"
   status = 301
   force = true
 
