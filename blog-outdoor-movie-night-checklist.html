@@ -125,11 +125,15 @@
     .nav-cta:hover { background: var(--red-dark) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
-    .mobile-menu { display: none; background: var(--navy-mid); padding: 16px 24px 24px; flex-direction: column; gap: 4px; }
-    .mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 15px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: block; }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu.open { display: flex; }
-    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+    .mobile-menu { display: flex; align-items: center; background: transparent; padding: 0; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--navy-mid); padding: 16px 24px 24px; flex-direction: column; gap: 4px; z-index: 99; overflow-y: auto; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 15px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: block; }
+      .mobile-menu a:last-child { border-bottom: none; }
+    }
 
     .blog-hero { position: relative; background: var(--navy); min-height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
     .blog-hero-img { position: absolute; inset: 0; background-image: url('./gallery-festival.jpg'); background-size: cover; background-position: center 30%; opacity: 0.38; }
