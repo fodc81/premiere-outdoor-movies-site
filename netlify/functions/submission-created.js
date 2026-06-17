@@ -145,6 +145,12 @@ exports.handler = async (event) => {
     const data = payload.data || {};
     const formName = payload.form_name || '';
 
+    // Skip non-quote forms (careers, contact, etc.) — they don't create IO leads
+    if (!formName.startsWith('quote-')) {
+      console.log(`Skipping non-quote form: ${formName}`);
+      return { statusCode: 200, body: 'Non-quote form — skipped' };
+    }
+
     // Skip spam / bot submissions
     if (data['bot-field']) {
       return { statusCode: 200, body: 'Bot submission ignored' };
