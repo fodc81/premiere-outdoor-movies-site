@@ -385,7 +385,8 @@
         <h3 class="form-title">Application Form</h3>
         <p class="form-sub">All fields are required. Your application goes directly to the operator in your area.</p>
 
-        <form id="careerForm" novalidate>
+        <form id="careerForm" name="career-application" data-netlify="true" novalidate>
+          <input type="hidden" name="form-name" value="career-application" />
           <input type="hidden" name="_subject" id="formSubject" value="CAREER APPLICATION" />
 
           <div class="form-row">
@@ -562,57 +563,38 @@
     document.getElementById('mobileMenu').classList.toggle('open');
   });
 
-  // ── Operator email routing by state ──
-  const operatorEmails = {
-    'NJ':        'events@premiereoutdoormovie.com',
-    'PA-PHILLY': 'events@premiereoutdoormovie.com',
-    'PA-EAST':   'events@premiereoutdoormovie.com',
-    'NY':        'ny@premiereoutdoormovie.com',
-    'CT':        'ct@premiereoutdoormovie.com',
-    'MA':        'ma@premiereoutdoormovie.com',
-    'DE':        'de@premiereoutdoormovie.com',
-    'MD':        'md@premiereoutdoormovie.com',
-    'VA':        'va@premiereoutdoormovie.com',
-    'FL':        'fl@premiereoutdoormovie.com'
-  };
-
-  // ── Form submission via Formspree ──
-  // Replace YOUR_FORMSPREE_ID with your actual Formspree form ID for career applications
-  // Sign up at formspree.io, create a form, and paste the form ID here
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_CAREER_FORM_ID';
-
+  // ── Form submission via Netlify Forms ──
   document.getElementById('careerForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    const form = this;
     const stateVal = document.getElementById('state').value;
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
-    const toEmail = operatorEmails[stateVal] || 'events@premiereoutdoormovie.com';
+    const stateLabel = document.getElementById('state').options[document.getElementById('state').selectedIndex].text;
 
-    // Update subject with state info
-    document.getElementById('formSubject').value = `CAREER APPLICATION — ${stateVal} — ${firstName} ${lastName}`;
+    // Update subject with applicant info
+    document.getElementById('formSubject').value = `CAREER APPLICATION — ${stateLabel} — ${firstName} ${lastName}`;
 
-    const data = {
-      _subject: document.getElementById('formSubject').value,
-      _replyto: document.getElementById('email').value,
-      _to: toEmail,
-      firstName,
-      lastName,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      state: document.getElementById('state').options[document.getElementById('state').selectedIndex].text,
-      city: document.getElementById('city').value,
-      vehicle: document.getElementById('vehicle').value,
-      availability: document.getElementById('availability').value,
-      message: document.getElementById('message').value
-    };
+    const formData = new URLSearchParams({
+      'form-name': 'career-application',
+      '_subject': document.getElementById('formSubject').value,
+      '_replyto': document.getElementById('email').value,
+      'firstName': firstName,
+      'lastName': lastName,
+      'email': document.getElementById('email').value,
+      'phone': document.getElementById('phone').value,
+      'state': stateLabel,
+      'city': document.getElementById('city').value,
+      'vehicle': document.getElementById('vehicle').value,
+      'availability': document.getElementById('availability').value,
+      'message': document.getElementById('message').value
+    });
 
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString()
       });
 
       if (res.ok) {
