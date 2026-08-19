@@ -24,6 +24,13 @@
 
 # ─── .html EXTENSION REMOVAL (eliminates .html duplicate URLs) ──
 # Redirects /page.html → /page for all pages
+# ── www canonical 301 (must fire first) ───────────────────────────────────────
+[[redirects]]
+  from = "https://premiereoutdoormovie.com/*"
+  to = "https://www.premiereoutdoormovie.com/:splat"
+  status = 301
+  force = true
+
 # force=true is required because Netlify pretty-URLs serves .html files directly
 [[redirects]]
   from = "/*.html"
