@@ -31,7 +31,269 @@
   status = 301
   force = true
 
-# force=true is required because Netlify pretty-URLs serves .html files directly
+# ─── EXPLICIT .HTML REDIRECTS (force=true required for physical files) ──────
+# Fix 1: /packages.html → / direct (avoids two-hop chain via /packages)
+[[redirects]]
+  from = "/packages.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Fix 3: orphaned .html pages with self-referencing canonicals
+[[redirects]]
+  from = "/media-kit.html"
+  to = "/media-kit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-10-tips-on-how-to-throw-an-outdoor-movie-party.html"
+  to = "/blog-10-tips-on-how-to-throw-an-outdoor-movie-party"
+  status = 301
+  force = true
+
+# Fix 4: main page .html URLs (force=true needed because physical files exist)
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reviews.html"
+  to = "/reviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-a-quote.html"
+  to = "/get-a-quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/new-jersey.html"
+  to = "/new-jersey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/philadelphia.html"
+  to = "/philadelphia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/florida.html"
+  to = "/florida"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/careers.html"
+  to = "/careers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/connecticut.html"
+  to = "/connecticut"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/delaware.html"
+  to = "/delaware"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/eastern-pa.html"
+  to = "/eastern-pa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/georgia.html"
+  to = "/georgia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/maryland.html"
+  to = "/maryland"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/massachusetts.html"
+  to = "/massachusetts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/movie-licensing.html"
+  to = "/movie-licensing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/new-york.html"
+  to = "/new-york"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/north-carolina.html"
+  to = "/north-carolina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ohio.html"
+  to = "/ohio"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/south-carolina.html"
+  to = "/south-carolina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/virginia.html"
+  to = "/virginia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blockbuster-event-package.html"
+  to = "/blockbuster-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/drive-in-package.html"
+  to = "/drive-in-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/indoor-event-package.html"
+  to = "/indoor-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/premiere-event-package.html"
+  to = "/premiere-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ultimate-event-package.html"
+  to = "/ultimate-event-package"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-connecticut.html"
+  to = "/quote-connecticut"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-corporate.html"
+  to = "/quote-corporate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-delaware.html"
+  to = "/quote-delaware"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-eastern-pa.html"
+  to = "/quote-eastern-pa"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-florida.html"
+  to = "/quote-florida"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-maryland.html"
+  to = "/quote-maryland"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-massachusetts.html"
+  to = "/quote-massachusetts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-new-jersey.html"
+  to = "/quote-new-jersey"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-new-york.html"
+  to = "/quote-new-york"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-philadelphia.html"
+  to = "/quote-philadelphia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quote-virginia.html"
+  to = "/quote-virginia"
+  status = 301
+  force = true
+
+# ─── CATCH-ALL: removes .html extension (fallback for any missed above) ──────
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
@@ -72,6 +334,7 @@
   from = "/backyard-party-package"
   to = "/backyard-movie-package"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/packages/backyard-party/*"
